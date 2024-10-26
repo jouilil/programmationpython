@@ -1,0 +1,1360 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Initiation au langage Python &#8212; FEG, Université Ibn Tofail    Prof. Jouilil Youness</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Instructions composées" href="Chapitre2.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="fr">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.JPG" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">FEG, Université Ibn Tofail    Prof. Jouilil Youness</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Initiation au langage Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapitre2.html">
+   Instructions composées
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapitre3.html">
+   Les fonctions et les modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapitre4.html">
+   Python pour la Data Mining
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Chapitre1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FChapitre1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kenitra-janvier-2024">
+   Kenitra, Janvier 2024
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   1. Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cest-quoi-python">
+     1.1.  C’est quoi Python ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pourquoi-devriez-vous-apprendre-python">
+     1.2. Pourquoi devriez-vous apprendre Python ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#premier-contact">
+   2. Premier contact
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulation-de-chaines-de-caracteres">
+   3. Manipulation de chaînes de caractères
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatener">
+     3.1. Concaténer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplier">
+     3.2.  Multiplier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longueur">
+     3.3.  longueur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minuscules-majuscules">
+     3.4.  Minuscules/majuscules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#couper">
+     3.5.  Couper
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remplacer">
+     3.6.  Remplacer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-operations-arithmetiques-en-python">
+   4.  Les opérations arithmétiques en Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignation-et-variables">
+   5.   Assignation et variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable">
+     5.1.  Variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-variables">
+     5.2   Types de variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-et-maximum">
+     5.3 Minimum et maximum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#liste">
+   7. Liste
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creation">
+     7.1. Création
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operations-sur-les-listes">
+     7.2. Opérations sur les listes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-len">
+       7.2.1 La fonction len()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-type">
+       7.2.2 La fonction type()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-range">
+       7.2.3 La fonction range()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-append">
+       7.2.4  La fonction append()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indicage-negatif">
+       7.2.5 Indiçage négatif
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-del">
+       7.2.6 la fonction del()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tranches">
+       7.2.7 Tranches
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#minimum-maximum-et-somme">
+       7.2.8 Minimum, maximum et somme
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercices-d-application">
+     7.3. Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operateurs-logiques-et-relationnels">
+   8.   Opérateurs logiques et relationnels
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operateurs-logiques">
+     8.1   Opérateurs logiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operateurs-relationnels-tests">
+     8.2.   Opérateurs relationnels (tests)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lecture-dinformations-au-clavier">
+   9. Lecture d’informations au clavier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convertir-les-types-de-donnees">
+   10. Convertir les types de données
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   11. Exercices d’application
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Initiation au langage Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kenitra-janvier-2024">
+   Kenitra, Janvier 2024
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   1. Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cest-quoi-python">
+     1.1.  C’est quoi Python ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pourquoi-devriez-vous-apprendre-python">
+     1.2. Pourquoi devriez-vous apprendre Python ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#premier-contact">
+   2. Premier contact
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulation-de-chaines-de-caracteres">
+   3. Manipulation de chaînes de caractères
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatener">
+     3.1. Concaténer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplier">
+     3.2.  Multiplier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longueur">
+     3.3.  longueur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minuscules-majuscules">
+     3.4.  Minuscules/majuscules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#couper">
+     3.5.  Couper
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remplacer">
+     3.6.  Remplacer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-operations-arithmetiques-en-python">
+   4.  Les opérations arithmétiques en Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignation-et-variables">
+   5.   Assignation et variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable">
+     5.1.  Variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-variables">
+     5.2   Types de variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-et-maximum">
+     5.3 Minimum et maximum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#liste">
+   7. Liste
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creation">
+     7.1. Création
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operations-sur-les-listes">
+     7.2. Opérations sur les listes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-len">
+       7.2.1 La fonction len()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-type">
+       7.2.2 La fonction type()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-range">
+       7.2.3 La fonction range()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-append">
+       7.2.4  La fonction append()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indicage-negatif">
+       7.2.5 Indiçage négatif
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-fonction-del">
+       7.2.6 la fonction del()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tranches">
+       7.2.7 Tranches
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#minimum-maximum-et-somme">
+       7.2.8 Minimum, maximum et somme
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercices-d-application">
+     7.3. Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operateurs-logiques-et-relationnels">
+   8.   Opérateurs logiques et relationnels
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operateurs-logiques">
+     8.1   Opérateurs logiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operateurs-relationnels-tests">
+     8.2.   Opérateurs relationnels (tests)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lecture-dinformations-au-clavier">
+   9. Lecture d’informations au clavier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convertir-les-types-de-donnees">
+   10. Convertir les types de données
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   11. Exercices d’application
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="initiation-au-langage-python">
+<h1>Initiation au langage Python<a class="headerlink" href="#initiation-au-langage-python" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="kenitra-janvier-2024">
+<h2>Kenitra, Janvier 2024<a class="headerlink" href="#kenitra-janvier-2024" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Remarque</p>
+<ul class="simple">
+<li><p>Version de Janvier 2024. En cours d’amélioration (à ne pas diffuser!)</p></li>
+<li><p>Support du cours d’Informatique, distribué gratuitement. Merci de signaler les erreurs éventuelles</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python">
+<h2>1. Python<a class="headerlink" href="#python" title="Lien permanent vers ce titre">¶</a></h2>
+<p><img alt="Drag Racing" src="_images/pyth..JPG" /></p>
+<div class="section" id="cest-quoi-python">
+<h3>1.1.  C’est quoi Python ?<a class="headerlink" href="#cest-quoi-python" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title"><font color='blue'>Python</font></p>
+<p>Python est un langage de programmation de haut niveau (high-level programming language), avec des applications dans de nombreux domaines, notamment :</p>
+<ul class="simple">
+<li><p>La programmation Web;</p></li>
+<li><p>Le calcul scientifique;</p></li>
+<li><p>Le gaming</p></li>
+<li><p>L’intelligence artificielle !</p></li>
+</ul>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"><font color='blue'> Le language Python</font></p>
+<p>Le langage Python est un de langage Interprété et dynamique. Il support la programmation orienté objet et il est ineffaçable avec plusieurs autres langages de programmation. L’un des plus grands avantages de Python est sa lisibilité, la simplicité de sa syntaxe et une large communauté qui est derrière son développement.</p>
+</div>
+</div>
+<div class="section" id="pourquoi-devriez-vous-apprendre-python">
+<h3>1.2. Pourquoi devriez-vous apprendre Python ?<a class="headerlink" href="#pourquoi-devriez-vous-apprendre-python" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title"><font color='blue'> Choix de python </font></p>
+<p>Apprendre Python offre de nombreux avantages en raison de ses caractéristiques et de sa polyvalence.</p>
+<ul class="simple">
+<li><p><strong>Multiplateforme (Windows, Linux, MacOs,…etc.)</strong></p></li>
+</ul>
+<p><img alt="Drag Racing" src="_images/source.jpg" /></p>
+<ul class="simple">
+<li><p><strong>Simplicité et sa synthaxe et proche de la langue anglaise</strong></p></li>
+</ul>
+<p><img alt="Drag Racing" src="_images/code.JPG" /></p>
+<ul class="simple">
+<li><p><strong>Eco-système riche et complet</strong></p></li>
+</ul>
+<p><img alt="Drag Racing" src="_images/packages.JPG" /></p>
+<ul class="simple">
+<li><p><strong>Open source et gratuit</strong></p></li>
+</ul>
+<p>Cela signifie que vous pouvez utiliser, modifier et distribuer le langage Python sans frais. La nature open source de Python favorise la collaboration, l’innovation et la création de nombreuses bibliothèques et frameworks qui enrichissent l’écosystème Python</p>
+<ul class="simple">
+<li><p><strong>Un des languages les plus populaires</strong></p></li>
+</ul>
+<p><img alt="Drag Racing" src="_images/rank.JPG" /></p>
+<ul class="simple">
+<li><p><strong>Traitement de données et analyse</strong></p></li>
+</ul>
+<p>Python est très populaire et utilisé par des organisations telles que Google, la NASA, la CIA,  Disney..etc.</p>
+<p><img alt="Drag Racing" src="_images/entreprises.JPG" /></p>
+</div>
+<p>Le présent chapitre introduit les éléments de base da la programmation sous Python. Il introduit les grandes caractéristiques du langage Python en mettant l’accent sur :</p>
+<p>Les opérations arithmétique en Python</p>
+<p>Affectation et variables</p>
+<p>Types de données de base dans Python</p>
+<p>Opérateurs logiques et relationnels</p>
+<p>Affichage Lecture d’informations</p>
+</div>
+</div>
+<div class="section" id="premier-contact">
+<h2>2. Premier contact<a class="headerlink" href="#premier-contact" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Commençons par créer un programme court qui affiche la fameuse phrase « Hello world! ». En Python, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> pour afficher du texte comme output</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello world!
+</pre></div>
+</div>
+</div>
+<div class="section" id="manipulation-de-chaines-de-caracteres">
+<h2>3. Manipulation de chaînes de caractères<a class="headerlink" href="#manipulation-de-chaines-de-caracteres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On peut  créer une chaîne de caractères en mettant entre guillemets le contenu de la variable et en utilisant le signe égal (<code class="docutils literal notranslate"><span class="pre">=</span></code>). Il est à noter qu’une chaîne de caractères est une classe d’objets qui consiste en une série de caractères</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour Adam!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour Adam!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="concatener">
+<h3>3.1. Concaténer<a class="headerlink" href="#concatener" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Concaténer Ce terme signifie “joindre des chaînes de caractères”. Ce processus est appelé la concaténation de chaînes, et s’effectue en utilisant l’opérateur plus <code class="docutils literal notranslate"><span class="pre">(+)</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="o">+</span><span class="s2">&quot;Adam!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>BonjourAdam!
+</pre></div>
+</div>
+<p>Notez qu’il vous faut indiquer explicitement là où vous voulez que des espaces apparaissent, en les mettant eux aussi entre des guillemets simples.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour &quot;</span><span class="o">+</span><span class="s2">&quot;Adam!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="o">+</span><span class="s2">&quot; Adam!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="s2">&quot;Adam!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Bonjour Adam!
+Bonjour Adam!
+Bonjour Adam!
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiplier">
+<h3>3.2.  Multiplier<a class="headerlink" href="#multiplier" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si vous voulez plusieurs copies d’une chaîne de caractères, utilisez l’opérateur de la multiplication <code class="docutils literal notranslate"><span class="pre">(*)</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bonjour &#39;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bonjour</span> <span class="n">bonjour</span> <span class="n">bonjour</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="longueur">
+<h3>3.3.  longueur<a class="headerlink" href="#longueur" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez déterminer le nombre de caractères contenus dans une chaîne de caractères à l’aide de len. Notez que l’espace blanc compte comme un caractère séparé.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;bonjour Adam!&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">13</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="minuscules-majuscules">
+<h3>3.4.  Minuscules/majuscules<a class="headerlink" href="#minuscules-majuscules" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il est parfois utile de convertir une chaîne de caractères en minuscules <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> ou majuscules <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> . Par exemple, il est plus facile pour l’ordinateur de reconnaître que “Bonjour” et “bonjour” sont le même mot si nous standardisons les casses au préalable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;BONJOUR LE MONDE&quot;</span>
+<span class="n">message1</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bonjour</span> <span class="n">le</span> <span class="n">monde</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;bonjour le monde&quot;</span>
+<span class="n">message2</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BONJOUR</span> <span class="n">LE</span> <span class="n">MONDE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="couper">
+<h3>3.5.  Couper<a class="headerlink" href="#couper" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si vous voulez couper les parties non désirées au début ou à la fin d’une chaîne de caractères, vous pouvez le faire en créant une nouvelle chaîne à l’aide de l’opérateur <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Python est un langage de programmation interprété&quot;</span>
+<span class="n">message1</span><span class="o">=</span> <span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="n">est</span> <span class="n">un</span> <span class="n">langag</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remplacer">
+<h3>3.6.  Remplacer<a class="headerlink" href="#remplacer" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si vous avez besoin de remplacer une sous-chaîne à l’intérieur d’une chaîne, vous pouvez le faire avec la méthode <code class="docutils literal notranslate"><span class="pre">replace</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Python est un langage de programmation interprété&quot;</span>
+<span class="n">message1</span><span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;programmation&quot;</span> <span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="n">est</span> <span class="n">un</span> <span class="n">langage</span> <span class="n">de</span> <span class="n">code</span> <span class="n">interprété</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="les-operations-arithmetiques-en-python">
+<h2>4.  Les opérations arithmétiques en Python<a class="headerlink" href="#les-operations-arithmetiques-en-python" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans sa forme la plus élémentaire, Python peut être utilisé tout simplement comme une <code class="docutils literal notranslate"><span class="pre">calculatrice</span></code>. Il peut réaliser les opérations arithmétiques suivantes :</p>
+<ul class="simple">
+<li><p>Addition : <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
+<li><p>Soustraction : <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
+<li><p>Multiplication : <code class="docutils literal notranslate"><span class="pre">*</span></code></p></li>
+<li><p>Division entière : <code class="docutils literal notranslate"><span class="pre">//</span></code></p></li>
+<li><p>Division : <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p>Exponentiation : <code class="docutils literal notranslate"><span class="pre">**</span></code></p></li>
+<li><p>Modulo : <code class="docutils literal notranslate"><span class="pre">%</span></code></p></li>
+</ul>
+<p>On rappelle que la division entière renvoi le quotient de la division euclidienne et le modulo renvoie le reste de la division euclidienne. Par exemple 7 // 4 est 1; 7 % 4 est 3, 5//2 est 2; 5%2 est 1.</p>
+<p>Commençons maintenant à programmer. Nous voulons calculer 1+5, 5-4, 4*3, (10+8)/3, 2**4, 28//6 et 28%6; Comme dans la plupart des langages de programmation, on utilise les symboles suivants pour les opérations mathématiques:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># addition</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># soustraction</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># multiplication</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># division</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">10</span><span class="o">+</span><span class="mi">8</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># exponentiation</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># division entière</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">28</span><span class="o">//</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># modulo</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">28</span><span class="o">%</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span>
+<span class="mi">1</span>
+<span class="mi">12</span>
+<span class="mf">6.0</span>
+<span class="mi">16</span>
+<span class="mi">4</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"><font color='blue'>Note</font></p>
+<p>Toute chose commençant par <code class="docutils literal notranslate"><span class="pre">#</span></code> est un commentaire, il sera ignoré par Python.</p>
+<p>Les commentaires sont une bonne manière de savoir ce qu’on fait ou pour qu’une autre personne sache ce qu’on fait.</p>
+</div>
+<p>Les commentaires usuels:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ceci est un commentaire</span>
+
+<span class="n">Les</span> <span class="n">commentaires</span> <span class="n">en</span> <span class="n">fin</span> <span class="n">de</span> <span class="n">ligne</span><span class="p">:</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># Ceci est un commentaire</span>
+
+</pre></div>
+</div>
+<p>En Python, comme dans de nombreux langages de programmation, les opérations mathématiques suivent l’ordre de priorité standard défini par les règles mathématiques. L’ordre d’exécution des opérations mathématiques est souvent mémorisé à l’aide de l’acronyme (Please Excuse My Dear Aunt Sally) PEMDAS, qui signifie :</p>
+<ul class="simple">
+<li><p>P= Parentheses;</p></li>
+<li><p>E= Exponents;</p></li>
+<li><p>M= Multiplication;</p></li>
+<li><p>D= Division;</p></li>
+<li><p>A= Addition;</p></li>
+<li><p>S= Substraction.</p></li>
+</ul>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Quelle est, selon vous, le résultat de ces opérations :</p>
+<div class="math notranslate nohighlight">
+\[
+4/2^2 \times (2 +1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+4/2^2 \times 2 +1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+{(4/2)}^2 \times 2 + 1,4/2^{2\times2}+1
+\]</div>
+<p>Verifier avec Python.</p>
+</div>
+</div>
+<div class="section" id="assignation-et-variables">
+<h2>5.   Assignation et variables<a class="headerlink" href="#assignation-et-variables" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="variable">
+<h3>5.1.  Variable<a class="headerlink" href="#variable" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une variable est concept fondamental en programmation. Elle permet de stocker une valeur (par exemple la valeur 2) ou un objet (par exemple une fonction, liste, tableau, vecteur, …). Cela permet de l’utiliser ultérieurement pour accéder facilement à la valeur ou à l’objet qui est stocké dans cette variable.</p>
+<p>On affecte une valeur a une variable en utilisant le symbole <code class="docutils literal notranslate"><span class="pre">=</span></code>. Si vous voulez stocker la valeur 4 dans une variable nommée <code class="docutils literal notranslate"><span class="pre">ma_valeur</span></code> on peut faire comme suit :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># affecter la valeur 4 a la variable ma_valeur</span>
+<span class="n">ma_valeur</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="c1"># afficher le contenu de la variable ma_valeur</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ma_valeur</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+</pre></div>
+</div>
+<p>On peut faire toutes les opérations susmentionnées avec les variables à la place de valeurs. Voici un exemple : Dans une classe, le nombre des hommes est 10 le nombre des femmes est 18.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Affecter le nombre des étudiants de sexe masculin à la variable hommes</span>
+<span class="n">hommes</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1"># Affecter le nombre des étudiants de sexe féminin à la variable femmes</span>
+<span class="n">femmes</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="c1"># Affecter le nombre total des étudiants à la variable total_etudiant</span>
+<span class="n">total_etudiant</span> <span class="o">=</span> <span class="n">hommes</span> <span class="o">+</span> <span class="n">femmes</span>
+
+<span class="c1"># Afficher le nombre total d&#39;étudiants</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_etudiant</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">28</span>
+</pre></div>
+</div>
+<p>Python supporte les opérateurs d’affectation suivants : <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">–</span> <span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, <code class="docutils literal notranslate"><span class="pre">/=</span></code>, <code class="docutils literal notranslate"><span class="pre">%=</span></code>, <code class="docutils literal notranslate"><span class="pre">**=</span></code> et <code class="docutils literal notranslate"><span class="pre">//=</span></code></p>
+<p>Hormis le premier opérateur <code class="docutils literal notranslate"><span class="pre">=</span></code>, les autres opérateurs ont la même logique. Nous allons illustrer cette logique avec <code class="docutils literal notranslate"><span class="pre">+=</span></code> et vous alles comprendre l’utilisation des autres.</p>
+<p>Supposons que nous avons une variable (soit <code class="docutils literal notranslate"><span class="pre">var</span></code>) qui contient une valeur (soit, par exemple 2) et pour une raison (vous allez confronter plusieurs raisons dans la suite de ce cours) nous voulons que cette variable reçoive l’ancienne valeur (2) plus une nouvelle valeur (soit, par exemple 1). On peut faire ça avec l’opérateur <code class="docutils literal notranslate"><span class="pre">=</span></code> comme suit :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># la variable var contient la valeur 2</span>
+<span class="n">var</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1"># la variable var reçoit l&#39;ancienne valeur plus 1</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">var</span> <span class="o">+</span><span class="mi">1</span>
+<span class="c1"># afficher le contenu de la variable var</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>On peut faire la même instruction avec l’opérateur <code class="docutils literal notranslate"><span class="pre">+=</span></code> comme suit :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># la variable var contient la valeur 2</span>
+<span class="n">var</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1"># la variable var reçoit l&#39;ancienne valeur plus 1</span>
+<span class="n">var</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1"># afficher le contenu de la variable var</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+</pre></div>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Avertissement</p>
+<p>Sous Python, les noms de variables doivent en outre obéir à quelques règles simples :</p>
+<ul class="simple">
+<li><p>Un nom de variable est une séquence de lettres (a → z, A → Z) et de chiffres (0 → 9), qui doit toujours commencer par une lettre.</p></li>
+<li><p>Seules les lettres ordinaires sont autorisées. Les lettres accentuées, les cédilles, les espaces, les caractères spéciaux tels que $, #, &#64;, etc. sont interdits, à l’exception du caractère _ (souligné).</p></li>
+<li><p>Python est « case sensitive » (les caractères majuscules et minuscules sont distingués). Par exemple : Var1, var1, VAR1 sont donc des variables différentes.</p></li>
+<li><p>il est interdit d’utiliser comme nom de variables les mots réservés a python. Ils sont : and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield,</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="types-de-variables">
+<h3>5.2   Types de variables<a class="headerlink" href="#types-de-variables" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il existe de nombreux types de données dans Python. Voici quelques-uns les plus basiques :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code>: Les valeurs décimales (ou en virgule flottante) telles que 10,15 (attention en utilise <code class="docutils literal notranslate"><span class="pre">.</span></code> comme décimal au lieu de <code class="docutils literal notranslate"><span class="pre">,</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> (les nombres entiers) : les valeurs comme 8; 4; 10 sont des entiers (<code class="docutils literal notranslate"><span class="pre">int</span></code>). Les entiers font aussi partie des valeurs numériques.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> (les valeurs booléennes) : <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code> sont dites valeurs logiques.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code> (les caractères, ou chaînes de caractères). Les guillemets « texte » (ou encore les apostrophes “texte”) indiquent que texte est de type <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complex</span></code> (les nombre complexes): sont les nombres contenant une partie réelle et une partie imaginaire. En mathématiques, on note  le nombre complexe dans le carrée est égale à 1. Cependant, en Python, on utilise la lettre <code class="docutils literal notranslate"><span class="pre">j</span></code> (ou <code class="docutils literal notranslate"><span class="pre">J</span></code>) pour indiquer ce nombre. Par exemple, si on voulait écrire le nombre 3+1.5<code class="docutils literal notranslate"><span class="pre">i</span></code> (le nombre complexe dont la partie réelle est 3 et la partie imaginaire est 1.5) en python on écrit 3 + 1.5<code class="docutils literal notranslate"><span class="pre">j</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: type Le mot-clé None est utilisé pour définir une valeur nulle (pas 0), ou aucune valeur du tout. None n’est pas la même chose que 0, <code class="docutils literal notranslate"><span class="pre">False</span></code> ou une chaîne vide “”. None est un type de données en soi (NoneType) et la seule valeur qui peut être de type <code class="docutils literal notranslate"><span class="pre">None</span></code> est le mot-clé None.</p></li>
+</ul>
+<p>si nous avons un variable (ou même une valeur) et nous voulons savoir son type de données, on utilise la fonction type. Il faut être prudent lorsqu’on voulait faire des opérations sur des variables si leur type n’est le même!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cette instruction va afficher int</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1"># cette instruction va afficher float</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.5</span><span class="p">))</span>
+
+<span class="c1"># cette instruction va afficher  bool</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+<span class="c1"># cette instruction va afficher str</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">))</span>
+
+<span class="c1"># cette instruction va afficher complex</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mf">17.89</span><span class="n">j</span><span class="p">))</span>
+
+<span class="c1"># cette instruction va afficher NoneType</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>
+
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;bool&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;complex&#39;&gt;
+&lt;class &#39;NoneType&#39;&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="minimum-et-maximum">
+<h3>5.3 Minimum et maximum<a class="headerlink" href="#minimum-et-maximum" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Python propose les fonctions min() et max() qui renvoient respectivement le minimum et le maximum de plusieurs entiers
+et /ou floats :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">c</span><span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="n">d</span> <span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">c</span> <span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="liste">
+<h2>7. Liste<a class="headerlink" href="#liste" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="creation">
+<h3>7.1. Création<a class="headerlink" href="#creation" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Sous Python, on peut aussi définir une liste comme une collection d’éléments séparés par des virgules, l’ensemble étant enfermé dans des crochets <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>.</p>
+<p>Les éléments de la liste peuvent être de n’importe quel type. Voici un exemple d’un liste en python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jour_et_nombre</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jour_et_nombre</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Lorsqu’on dit que les éléments d’une liste peuvent contenir n’importe quel type, on ne rigole pas !! Voici une illustration :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># on peut avoir une liste contenant des listes comme des éléments</span>
+<span class="c1"># une première liste</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">]</span>
+
+<span class="c1"># une deuxième liste</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+
+<span class="c1"># une troisième liste contenante list1 et list2 comme éléments</span>
+<span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">]</span>
+
+<span class="c1"># une quatrième liste contenante list1, list2, et list3 comme éléments</span>
+<span class="n">list4</span> <span class="o">=</span> <span class="p">[</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">,</span> <span class="n">list3</span><span class="p">]</span>
+
+<span class="c1"># afficher les listes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">]]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="operations-sur-les-listes">
+<h3>7.2. Opérations sur les listes<a class="headerlink" href="#operations-sur-les-listes" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="la-fonction-len">
+<h4>7.2.1 La fonction len()<a class="headerlink" href="#la-fonction-len" title="Lien permanent vers ce titre">¶</a></h4>
+<p>La fonction intégrée len(), que nous avons déjà rencontrée à propos des chaînes, s’applique aussi aux
+listes. Elle renvoie le nombre d’éléments présents dans la liste :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-type">
+<h4>7.2.2 La fonction type()<a class="headerlink" href="#la-fonction-type" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">jour_et_nombre</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">jour_et_nombre</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[&#39;lundi&#39;, &#39;mardi&#39;, &#39;mercredi&#39;, &#39;jeudi&#39;, &#39;vendredi&#39;, &#39;samedi&#39;, &#39;dimanche&#39;, 0, 1, 5]
+&lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-range">
+<h4>7.2.3 La fonction range()<a class="headerlink" href="#la-fonction-range" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Si vous avez besoin de créer sur une suite d’entiers, vous pouvez utiliser la fonction list(range()). Elle génère une suite arithmétique.</p>
+<p><strong>syntaxe = range(aleur_initiale, borne_de_fin, pas)</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Il ) noter qu’il est possible de faire commencer l’intervalle à un autre nombre, ou de spécifier un incrément différent (même négatif) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">97</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Créer une liste contenant les entiers allant de 1997 à 2024.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Créer une liste contenant les entiers impairs inférieur à 20.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Créer une liste contenant les entiers pairs inférieurs ou égale à 20.</p>
+</div>
+</div>
+<div class="section" id="la-fonction-append">
+<h4>7.2.4  La fonction append()<a class="headerlink" href="#la-fonction-append" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Il est également possible d’ajouter un élément à une liste, à l’aide de la fonction append()</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;lundi&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indicage-negatif">
+<h4>7.2.5 Indiçage négatif<a class="headerlink" href="#indicage-negatif" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Une liste peut être indexée avec des nombres positifs et/ou négatifs.</p>
+<ul class="simple">
+<li><p>Pour les indices positifs, on commence par 0.</p></li>
+<li><p>Pour les indices négatifs, on commeence par -1. Les indices négatifs reviennent à compter à partir de la fin</p></li>
+</ul>
+<p><img alt="Drag Racing" src="_images/indices.JPG" /></p>
+</div>
+<div class="section" id="la-fonction-del">
+<h4>7.2.6 la fonction del()<a class="headerlink" href="#la-fonction-del" title="Lien permanent vers ce titre">¶</a></h4>
+<p>C’est une fonction intégrée permet de supprimer d’une liste un élément quelconque (à partir de son index).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">del</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tranches">
+<h4>7.2.7 Tranches<a class="headerlink" href="#tranches" title="Lien permanent vers ce titre">¶</a></h4>
+</div>
+<div class="section" id="minimum-maximum-et-somme">
+<h4>7.2.8 Minimum, maximum et somme<a class="headerlink" href="#minimum-maximum-et-somme" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Constituez une liste année contenant les 12 mois de l’année.</p>
+<ol class="simple">
+<li><p>À partir de cette liste, comment récupérez-vous seulement les 3 premiers mois de l’année d’une part, et le reste d’autre part ? Utilisez pour cela l’indiçage.</p></li>
+<li><p>Cherchez un autre moyen pour arriver au même résultat (en utilisant un autre indiçage).</p></li>
+<li><p>Trouvez deux manières pour accéder au dernier mois de l’année.</p></li>
+<li><p>Inversez les mois de l’année en une commande.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="exercices-d-application">
+<h3>7.3. Exercices d’application<a class="headerlink" href="#exercices-d-application" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Écrire un programme qui, à partir de la saisie d’un côté c, calcule l’aire  d’un carrée.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Écrire un programme qui, à partir de la saisie d’un Longueur (L) et un largeur (l), calcule l’aire  d’un rectangle.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Écrire un programme qui, à partir de la saisie d’une base (b) et un hauteur (h), calcule l’aire  d’un triangle.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Écrire un programme qui, à partir de la saisie d’un rayon et d’une hauteur, calcule le volume d’un cône droit.</p>
+</div>
+</div>
+</div>
+<div class="section" id="operateurs-logiques-et-relationnels">
+<h2>8.   Opérateurs logiques et relationnels<a class="headerlink" href="#operateurs-logiques-et-relationnels" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="operateurs-logiques">
+<h3>8.1   Opérateurs logiques<a class="headerlink" href="#operateurs-logiques" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En python, il existe trois opérateurs logiques : <code class="docutils literal notranslate"><span class="pre">or</span></code> qui signifie ou, <code class="docutils literal notranslate"><span class="pre">and</span></code> qui signifie et, et <code class="docutils literal notranslate"><span class="pre">not</span></code> qui signifie non.</p>
+<p>Pour mieux illustrer ces opérations, soient <code class="docutils literal notranslate"><span class="pre">var1=</span> <span class="pre">True</span></code> et <code class="docutils literal notranslate"><span class="pre">var2</span> <span class="pre">=</span> <span class="pre">False</span></code>. Quel serait le résultat des instructions suivantes :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">var1</span> <span class="pre">or</span> <span class="pre">var2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var1</span> <span class="pre">and</span> <span class="pre">var2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">var1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(var1</span> <span class="pre">and</span> <span class="pre">var2)</span> <span class="pre">or</span> <span class="pre">(not</span> <span class="pre">var2)</span></code></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialiser les deux variables</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span> <span class="n">var2</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># remarquer qu&#39;on peut faire plusieurs instructions dans une même linge. Cependant, il est déconseillé</span>
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var1</span> <span class="ow">or</span> <span class="n">var2</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var1</span> <span class="ow">and</span> <span class="n">var2</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">var1</span><span class="p">)</span>
+
+<span class="c1"># </span>
+<span class="nb">print</span><span class="p">((</span><span class="n">var1</span> <span class="ow">and</span> <span class="n">var2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="n">var2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
+<span class="kc">False</span>
+<span class="kc">False</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="operateurs-relationnels-tests">
+<h3>8.2.   Opérateurs relationnels (tests)<a class="headerlink" href="#operateurs-relationnels-tests" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En python, il existe six opérateurs relationnels :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> qui permet de tester si une valeur et strictement inférieure à une autre ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> qui permet de tester si une valeur et inférieure ou égale à une autre ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> qui permet de tester si une valeur et strictement supérieure à une autre ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> qui permet de tester si une valeur et supérieure ou égale à une autre ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> ou <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> qui permet de tester si une valeur est égale a une autre;</p></li>
+<li><p>et <code class="docutils literal notranslate"><span class="pre">==</span></code> qui permet de tester l’égalité de deux valeurs.</p></li>
+</ul>
+<p>Soient <code class="docutils literal notranslate"><span class="pre">var1</span> <span class="pre">=</span> <span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">var2</span> <span class="pre">=</span> <span class="pre">2+3</span></code>, <code class="docutils literal notranslate"><span class="pre">var3</span> <span class="pre">=</span> <span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">var4</span> <span class="pre">=</span> <span class="pre">&quot;bonjour&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">var5</span> <span class="pre">=</span> <span class="pre">True</span></code>. Quel serait le résultat des instructions suivantes :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">var1</span> <span class="pre">==</span> <span class="pre">var2</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var2</span> <span class="pre">!=</span> <span class="pre">var4</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var3</span> <span class="pre">&gt;</span> <span class="pre">var1+</span> <span class="pre">var2</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var3&lt;</span> <span class="pre">var1</span> <span class="pre">+</span> <span class="pre">var2</span></code>;</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">var2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span> <span class="n">var3</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="n">var4</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span><span class="p">;</span> <span class="n">var5</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var1</span> <span class="o">==</span> <span class="n">var2</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var1</span> <span class="o">!=</span> <span class="n">var4</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var3</span> <span class="o">&gt;</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var3</span> <span class="o">&lt;</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
+<span class="kc">True</span>
+<span class="kc">False</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="lecture-dinformations-au-clavier">
+<h2>9. Lecture d’informations au clavier<a class="headerlink" href="#lecture-dinformations-au-clavier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Parfois, on est amené a ce que notre programme dépend d’intervention de l’utilisateur (entrée d’un paramètre, clic de souris sur un bouton, etc.). Dans un programme simple, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">input</span></code>. Cette fonction invite l’utilisateur à entrer des données au clavier puis taper <code class="docutils literal notranslate"><span class="pre">&lt;entrer&gt;</span></code>. Lorsque le programme est exécuté, une case apparait à l’utilisateur pour entrer ces donner. Puis le programme continue à s’exécuter pour rendre un output. Les données entrées par l’utilisateur peuvent être stockées dans une variable. Il est à noter que cette variable sera de type <code class="docutils literal notranslate"><span class="pre">str</span></code>. Donc, si l’on veut des données numériques par exemple, on doit convertir cette variable au type de donne que nous souhaitons. Enfin, on peut y mettre comme argument un texte qui oriente à l’utilisateur lors de l’entrée des données. Voici un exemple dont on demande à l’utilisateur d’entrer son nom.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Le type de la variable qui stocke le contenu de <code class="docutils literal notranslate"><span class="pre">input</span></code> est toujours <code class="docutils literal notranslate"><span class="pre">str</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;merci d&#39;entrer un chiffre: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="convertir-les-types-de-donnees">
+<h2>10. Convertir les types de données<a class="headerlink" href="#convertir-les-types-de-donnees" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il existe plusieurs raisons pour lesquelles nous somme devant l’obligation de convertir les types de données (une raison est celle de <code class="docutils literal notranslate"><span class="pre">input</span></code> que nous avons vu). Les fonctions qui servent à la conversion entre les types de données sont les suivantes :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int()</span></code>: pour convertir un type de données en entier;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float()</span></code>: pour convertir un type de données en virgule flottante.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str()</span></code>: pour convertir un types de donnes en chaine de caractères;</p></li>
+<li><p>et <code class="docutils literal notranslate"><span class="pre">bool()</span></code>: pour convertir les types de donnes en valeurs booléennes.</p></li>
+</ul>
+<p>Les types de données <code class="docutils literal notranslate"><span class="pre">int</span></code> et <code class="docutils literal notranslate"><span class="pre">float</span></code> peuvent être convertis en tous autre type de données. La seule remarque est que la conversion d’une valeur de type <code class="docutils literal notranslate"><span class="pre">float</span></code> en <code class="docutils literal notranslate"><span class="pre">int</span></code> rend les chiffres avant la virgule (1.9 devient 1 après conversion). Pour avoir l’entier le plus proche au nombre que nous voulons convertir, nous devons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">round()</span></code>.</p>
+</div>
+<div class="section" id="id1">
+<h2>11. Exercices d’application<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Écrivez un programme en Python qui demande à l’utilisateur d’entrer son âge. En utilisant cette information, le programme doit calculer et afficher la date de naissance présumée de l’utilisateur.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrire un petit programme qui permet de demander à l’utilisateur d’entrer son nom, son poids en kilogramme (sans entrer l’unité), et sa taille en mètre (sans entrer l’unité). Puis il affiche l’indice du poids Body mass index (BMI) :</p>
+<p>Indication : Formule du BMI :</p>
+<div class="math notranslate nohighlight">
+\[
+BMI= \dfrac{poids}{taille^2}
+\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="précédent page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">précédent</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapitre2.html" title="suivant page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Instructions composées</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Prof. Jouilil Youness<br/>
+    
+        &copy; droits d'auteur 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

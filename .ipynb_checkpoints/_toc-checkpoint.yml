@@ -1,0 +1,45 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+# jb build book/ --builder latex for latex
+format: jb-article
+root: intro
+sections:
+- file: chap1
+  sections:
+  - file: chap11
+  - file: chap12
+  - file: chap13
+  - file: chap14
+  - file: chap15
+  - file: exercices1
+- file: Chapitre2
+  sections:
+  - file: chap21
+  - file: chap22
+  - file: chap23
+  - file: exercices2
+- file: Chapitre03
+- file: Chapitre3
+  sections:
+  - file: chap31
+  - file: chap32
+  - file: chap33
+  - file: chap34
+- file: Chapitre4
+  sections:
+  - file: chap41
+  - file: chap42
+  - file: chap43
+- file: Chapitre5
+  sections: 
+  - file: chap51
+  - file: chap52
+  - file: chap53
+  - file: chap54
+- file: Chapitre6
+  sections:
+  - file: chap61
+  - file: chap62
+- file: Chapitre7
+- file: Chapitre8
+- file: Chapitre9

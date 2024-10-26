@@ -1,0 +1,977 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulation de listes en Python &#8212; FEG, Université Ibn Tofail    Prof. Jouilil Youness</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Les dictionnaires en Python" href="chap15.html" />
+    <link rel="prev" title="Tuples en Python" href="chap13.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="fr">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.JPG" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">FEG, Université Ibn Tofail    Prof. Jouilil Youness</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chap1.html">
+   Initiation au langage Python
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap11.html">
+     Les éléments de base
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap12.html">
+     Variables et opérations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap13.html">
+     Tuples en Python
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Manipulation de listes en Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap15.html">
+     Les dictionnaires en Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercices1.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Chapitre2.html">
+   Instructions composées
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap21.html">
+     Instructions conditionnelles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap22.html">
+     Les Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap23.html">
+     Listes en compréhension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercices2.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Chapitre3.html">
+   Les fonctions et les modules
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap31.html">
+     Les fonctions en Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap32.html">
+     Les modules en Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Chapitre4.html">
+   Python pour la Data Mining
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap41.html">
+     Manipulation et Exploration de Données
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap42.html">
+     Analyse exploratoire des données
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercices4.html">
+     Python pour la Data Mining
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chap14.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap14.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation">
+   1. Création
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-sur-les-listes">
+   2. Opérations sur les listes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-len">
+     2.1 La fonction len()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-type">
+     2.2 La fonction type()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-range">
+     2.3 La fonction range()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-append">
+     2.4  La fonction append()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-insert">
+     2.5 La fonction insert()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-del-remove-pop">
+     2.6 La fonction del(), remove() &amp; pop()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-count">
+     2.7 La fonction count
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-index">
+     2.8 La fonction index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-sort">
+     2.9 La fonction sort
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-reverse">
+     2.10 La fonction reverse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-copy">
+     2.11 La fonction copy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-maximum-et-somme">
+     2.12 Minimum, maximum et somme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing-indexing">
+   3. Slicing &amp; Indexing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indicage">
+     3.1 Indiçage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slices">
+     3.2. Slices
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#slices-avec-deux-indices">
+       3.2.1 Slices avec deux indices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#slices-etendus">
+       3.2.2 Slices étendus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Manipulation de listes en Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation">
+   1. Création
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-sur-les-listes">
+   2. Opérations sur les listes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-len">
+     2.1 La fonction len()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-type">
+     2.2 La fonction type()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-range">
+     2.3 La fonction range()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-append">
+     2.4  La fonction append()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-insert">
+     2.5 La fonction insert()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-del-remove-pop">
+     2.6 La fonction del(), remove() &amp; pop()
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-count">
+     2.7 La fonction count
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-index">
+     2.8 La fonction index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-sort">
+     2.9 La fonction sort
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-reverse">
+     2.10 La fonction reverse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-fonction-copy">
+     2.11 La fonction copy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-maximum-et-somme">
+     2.12 Minimum, maximum et somme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing-indexing">
+   3. Slicing &amp; Indexing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indicage">
+     3.1 Indiçage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slices">
+     3.2. Slices
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#slices-avec-deux-indices">
+       3.2.1 Slices avec deux indices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#slices-etendus">
+       3.2.2 Slices étendus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="manipulation-de-listes-en-python">
+<h1>Manipulation de listes en Python<a class="headerlink" href="#manipulation-de-listes-en-python" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="creation">
+<h2>1. Création<a class="headerlink" href="#creation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Sous Python, on peut aussi définir une liste comme une collection d’éléments séparés par des virgules, l’ensemble étant enfermé dans des crochets <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>.</p>
+<p>Les éléments de la liste peuvent être de n’importe quel type. Voici un exemple d’un liste en python :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Créer une liste vide</span>
+<span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jour_et_nombre</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jour_et_nombre</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Lorsqu’on dit que les éléments d’une liste peuvent contenir n’importe quel type, on ne rigole pas !! Voici une illustration :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># on peut avoir une liste contenant des listes comme des éléments</span>
+<span class="c1"># une première liste</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">]</span>
+
+<span class="c1"># une deuxième liste</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+
+<span class="c1"># une troisième liste contenante list1 et list2 comme éléments</span>
+<span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">]</span>
+
+<span class="c1"># une quatrième liste contenante list1, list2, et list3 comme éléments</span>
+<span class="n">list4</span> <span class="o">=</span> <span class="p">[</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">,</span> <span class="n">list3</span><span class="p">]</span>
+
+<span class="c1"># afficher les listes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">]]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="operations-sur-les-listes">
+<h2>2. Opérations sur les listes<a class="headerlink" href="#operations-sur-les-listes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet d’ajouter deux listes ensemble pour former une troisième liste :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pour savoir si un élément est présent dans une liste donnée, on peut utiliser le mot-clé <code class="docutils literal notranslate"><span class="pre">in</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">ma_liste</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">19</span> <span class="ow">in</span> <span class="n">ma_liste</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
+<span class="kc">False</span>
+</pre></div>
+</div>
+<div class="section" id="la-fonction-len">
+<h3>2.1 La fonction len()<a class="headerlink" href="#la-fonction-len" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La fonction intégrée len(), que nous avons déjà rencontrée à propos des chaînes, s’applique aussi aux
+listes. Elle renvoie le nombre d’éléments présents dans la liste :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-type">
+<h3>2.2 La fonction type()<a class="headerlink" href="#la-fonction-type" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">jour_et_nombre</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">jour_et_nombre</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[&#39;lundi&#39;, &#39;mardi&#39;, &#39;mercredi&#39;, &#39;jeudi&#39;, &#39;vendredi&#39;, &#39;samedi&#39;, &#39;dimanche&#39;, 0, 1, 5]
+&lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-range">
+<h3>2.3 La fonction range()<a class="headerlink" href="#la-fonction-range" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si vous avez besoin de créer sur une suite d’entiers, vous pouvez utiliser la fonction list(range()). Elle génère une suite arithmétique.</p>
+<p><strong>syntaxe</strong> = <code class="docutils literal notranslate"><span class="pre">list(range(valeur_initiale,</span> <span class="pre">borne_de_fin,</span> <span class="pre">pas))</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Il ) noter qu’il est possible de faire commencer l’intervalle à un autre nombre, ou de spécifier un incrément différent (même négatif) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">97</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Créer une liste contenant les entiers allant de 1997 à 2024.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Créer une liste contenant les entiers impairs inférieur à 20.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Créer une liste contenant les entiers pairs inférieurs ou égale à 20.</p>
+</div>
+</div>
+<div class="section" id="la-fonction-append">
+<h3>2.4  La fonction append()<a class="headerlink" href="#la-fonction-append" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il est également possible d’ajouter un élément à une liste, à l’aide de la fonction append()</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;lundi&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-insert">
+<h3>2.5 La fonction insert()<a class="headerlink" href="#la-fonction-insert" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette fonction insère une nouvelle valeur dans la liste courante, à la position spécifiée en paramètre</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Une liste initiale</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>    
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> 
+
+<span class="c1"># On y ajout des valeurs </span>
+<span class="n">data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-del-remove-pop">
+<h3>2.6 La fonction del(), remove() &amp; pop()<a class="headerlink" href="#la-fonction-del-remove-pop" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour supprimer un élément d’une liste donnée on peut utiliser :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">del()</span></code> : est une fonction intégrée permet de supprimer d’une liste un élément quelconque (à partir de son index).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code> : Enlève de la liste l’élément situé à la position indiquée et le renvoie en valeur de retour. Si aucune position n’est  spécifiée, pop() enlève et renvoie le dernier élément de la liste.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">del</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Il aussi est possible de supprimer une entrée d’une liste avec sa valeur avec la fonction <code class="docutils literal notranslate"><span class="pre">remove</span></code> .</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;dimanche&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-count">
+<h3>2.7 La fonction count<a class="headerlink" href="#la-fonction-count" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour compter le nombre d’occurences d’une valeur, on peut utiliser la fonction <code class="docutils literal notranslate"><span class="pre">count</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste2</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="s2">&quot;Ali&quot;</span><span class="p">,</span><span class="s2">&quot;O&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">liste2</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-index">
+<h3>2.8 La fonction index<a class="headerlink" href="#la-fonction-index" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">index</span></code> vous permet de connaitre la position de l’item cherché.</p>
+<p>Pour compter le nombre d’occurences d’une valeur, on peut utiliser la fonction <code class="docutils literal notranslate"><span class="pre">index</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste2</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="s2">&quot;Ali&quot;</span><span class="p">,</span><span class="s2">&quot;O&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">liste2</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Ali&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-sort">
+<h3>2.9 La fonction sort<a class="headerlink" href="#la-fonction-sort" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Elle permet d’ordonner les éléments dans la liste.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste2</span><span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">liste2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-reverse">
+<h3>2.10 La fonction reverse<a class="headerlink" href="#la-fonction-reverse" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Elle permet d’inverser l’ordre des éléments dans la liste.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste2</span><span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">liste2</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="la-fonction-copy">
+<h3>2.11 La fonction copy<a class="headerlink" href="#la-fonction-copy" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour copier une liste de cette manière adéquate, il est recommandé d’utiliser la fonction <code class="docutils literal notranslate"><span class="pre">copy()</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste2</span><span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">x</span><span class="o">=</span><span class="n">liste2</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="minimum-maximum-et-somme">
+<h3>2.12 Minimum, maximum et somme<a class="headerlink" href="#minimum-maximum-et-somme" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les fonctions suivantes : <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code> et <code class="docutils literal notranslate"><span class="pre">sum()</span></code> renvoient respectivement le minimum, le maximum et la somme d’une liste passée en argument.</p>
+<ul class="simple">
+<li><p>Pour connaître le plus grand élément d’une liste : <code class="docutils literal notranslate"><span class="pre">max()</span></code></p></li>
+<li><p>Pour connaître le plus petit élément d’une liste : <code class="docutils literal notranslate"><span class="pre">min()</span></code></p></li>
+<li><p>Pour sommer les éléments d’une liste : <code class="docutils literal notranslate"><span class="pre">sum()</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">liste</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">liste</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">liste</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Affichage après exécution :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">88</span>
+<span class="mi">0</span>
+<span class="mi">120</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing-indexing">
+<h2>3. Slicing &amp; Indexing<a class="headerlink" href="#slicing-indexing" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une <code class="docutils literal notranslate"><span class="pre">slice</span></code> permet de découper des structures de données séquentielles, telles que  :</p>
+<ul class="simple">
+<li><p>les chaînes de caractères</p></li>
+<li><p>les listes.</p></li>
+</ul>
+<p>Les <code class="docutils literal notranslate"><span class="pre">slices</span></code> sont des expressions en Python qui permettent d’extraire des éléments d’une liste ou d’une chaîne en une seule ligne de code</p>
+<div class="section" id="indicage">
+<h3>3.1 Indiçage<a class="headerlink" href="#indicage" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une liste peut être indexée avec des nombres positifs et/ou négatifs.</p>
+<ul class="simple">
+<li><p>Pour les indices positifs, on commence par 0.</p></li>
+<li><p>Pour les indices négatifs, on commeence par -1. Les indices négatifs reviennent à compter à partir de la fin</p></li>
+</ul>
+<p><img alt="Drag Racing" src="_images/indices.JPG" /></p>
+</div>
+<div class="section" id="slices">
+<h3>3.2. Slices<a class="headerlink" href="#slices" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="slices-avec-deux-indices">
+<h4>3.2.1 Slices avec deux indices<a class="headerlink" href="#slices-avec-deux-indices" title="Lien permanent vers ce titre">¶</a></h4>
+<p><strong>syntaxe</strong> : Object <code class="docutils literal notranslate"><span class="pre">[start:end]</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Université&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1">#Indices négatifs</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">9</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span>
+<span class="n">i</span>
+<span class="n">Un</span>
+<span class="n">é</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">])</span>
+<span class="c1">#Indices négatifs</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<span class="mi">5</span>
+<span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="mi">10</span>
+<span class="mi">8</span>
+<span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slices-etendus">
+<h4>3.2.2 Slices étendus<a class="headerlink" href="#slices-etendus" title="Lien permanent vers ce titre">¶</a></h4>
+<p><strong>syntaxe</strong> : Object <code class="docutils literal notranslate"><span class="pre">[start:end:step]</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Université&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[:</span><span class="mi">4</span><span class="p">:])</span> <span class="c1"># les quatre premiers élements</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1">#Indices négatifs</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">9</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1"># Copie superficielle</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[::])</span>
+<span class="c1"># Copie à l’envers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Universit</span>
+<span class="n">Univ</span>
+<span class="n">Uiest</span>
+<span class="n">tisrevi</span>
+<span class="n">Université</span>
+<span class="n">étisrevinU</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1">#Indices négatifs</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># Tous sauf les 4 premiers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[</span><span class="mi">4</span><span class="p">::])</span>
+<span class="c1">#Tous sauf les 4 derniers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Constituez une liste année contenant les 12 mois de l’année.</p>
+<ol class="simple">
+<li><p>À partir de cette liste, comment récupérez-vous seulement les 3 premiers mois de l’année d’une part, et le reste d’autre part ? Utilisez pour cela l’indiçage.</p></li>
+<li><p>Cherchez un autre moyen pour arriver au même résultat (en utilisant un autre indiçage).</p></li>
+<li><p>Trouvez deux manières pour accéder au dernier mois de l’année.</p></li>
+<li><p>Inversez les mois de l’année en une commande.</p></li>
+</ol>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="chap13.html" title="précédent page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">précédent</p>
+            <p class="prev-next-title">Tuples en Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="chap15.html" title="suivant page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Les dictionnaires en Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Prof. Jouilil Youness<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
