@@ -6,7 +6,7 @@
 ```{admonition} Remarque
 :class: attention
 
-- Version de Janvier 2024. <font color='red'>En cours d’amélioration (à ne pas diffuser!)</font>
+- Version de octobre 2024. <font color='red'>En cours d’amélioration (à ne pas diffuser!)</font>
 - Support du cours d'Informatique, distribué gratuitement. Merci de signaler les erreurs éventuelles
 ```
 
