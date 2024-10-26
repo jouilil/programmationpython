@@ -1,12 +1,12 @@
 # Introduction
-### 4 IA Management, HEC     
-### Année universitaire 2024-2025
+### Master Recherche EPPD, FEGK
+### Année universitaire 2023-2024
 #### Prof. Jouilil Youness
-##### Kenitra, Octobre 2024
+##### Kenitra, Janvier 2024
 
 
 ```{admonition} Remarques
-- Version de octobre 2024. En cours d’amélioration (à ne pas diffuser!)
+- Version de Janvier 2024. En cours d’amélioration (à ne pas diffuser!)
 - Support du cours d'Informatique, distribué gratuitement. 
 - Merci de signaler les erreurs éventuelles!
 ```

@@ -1,12 +1,12 @@
 # Initiation au langage Python
 
 
-#### Kenitra, Janvier 2024
+#### Rabat, Octobre 2024
 
 ```{admonition} Remarque
 :class: attention
 
-- Version de octobre 2024. <font color='red'>En cours d’amélioration (à ne pas diffuser!)</font>
+- Version d'octobre 2024. <font color='red'>En cours d’amélioration (à ne pas diffuser!)</font>
 - Support du cours d'Informatique, distribué gratuitement. Merci de signaler les erreurs éventuelles
 ```
 
