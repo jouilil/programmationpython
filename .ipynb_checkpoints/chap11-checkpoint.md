@@ -1,324 +1,173 @@
-# Les éléments de base
-
-
-![Drag Racing](pyth..JPG)
+# Introduction to Algorithms
 
 
 
-##### 1.1.  C’est quoi Python ?
+##### 1.  What's an algorithm ?
 
-```{admonition} <font color='blue'>Python</font>
+```{admonition} <font color='blue'>Algorithmics</font>
 :class: tip
 
-Python est un langage de programmation de haut niveau (high-level programming language), avec des applications dans de nombreux domaines, notamment :
-
-- La programmation Web;
-
-- Le calcul scientifique;
-
-- Le gaming
-
-- L’intelligence artificielle !
+**Algorithmics** refers to the discipline that studies algorithms and their applications in computer science.
 
 ```
 
-```{admonition} <font color='blue'> Le language Python</font>
+```{admonition} <font color='blue'> Algorithm </font>
 :class: tip
 
-Le langage Python est un de langage Interprété et dynamique. Il support la programmation orienté objet et il est ineffaçable avec plusieurs autres langages de programmation. L’un des plus grands avantages de Python est sa lisibilité, la simplicité de sa syntaxe et une large communauté qui est derrière son développement.
+**An algorithm** is any well-deûned computational procedure that takes some value,
+or set of values, as input and produces some value, or set of values, as output in a
+ûnite amount of time. An algorithm is thus a sequence of computational steps that
+transform the input into the output.
 
+```
+
+##### 2.  Algorithmics vs Algorithm
+
+```{admonition} <font color='blue'>Algorithmics vs Algorithm</font>
+:class: tip
+
+- **Algorithm**: A specific procedure or set of instructions for solving a problem.
+
+- **Algorithmics**: The field of study that focuses on the design, analysis, and optimization of algorithms.
 ```
 
 
 
-
-##### 1.2. Pourquoi devriez-vous apprendre Python ?
-
-
-```{admonition} <font color='blue'> Choix de python </font>
+```{admonition} <font color='blue'>Examples of Algorithms</font>
 :class: tip
 
-Apprendre Python offre de nombreux avantages en raison de ses caractéristiques et de sa polyvalence. 
-
-- **Multiplateforme (Windows, Linux, MacOs,...etc.)**
-
-![Drag Racing](source.jpg)
+- Weather prediction algorithm
 
 
-- **Simplicité et sa syntaxe et proche de la langue anglaise**
+- Traffic light control algorithm
 
-![Drag Racing](code.JPG)
+- Sorting and Searching Algorithms
 
+- Machine Learning and AI Algorithms
 
-- **Eco-système riche et complet**
+- Spam filtering algorithm (used in email services)
 
-![Drag Racing](packages.JPG)
+- Face recognition algorithm (used in security systems)
 
+- Speech recognition algorithm (used in virtual assistants)
 
-- **Open source et gratuit**
+- Fraud detection algorithm (used in banking)
 
-Cela signifie que vous pouvez utiliser, modifier et distribuer le langage Python sans frais. La nature open source de Python favorise la collaboration, l'innovation et la création de nombreuses bibliothèques et frameworks qui enrichissent l'écosystème Python
+- Recommendation system algorithm (used in Netflix, YouTube)
 
-- **Un des languages les plus populaires**
+An algorithm can be, for example, a cooking recipe:
 
-![Drag Racing](rank.JPG)
+- Ingredients
 
-- **Traitement de données et analyse**
+- Follow a recipe
 
-Python est très populaire et utilisé par des organisations telles que Google, la NASA, la CIA,  Disney..etc.
+- Final dish
 
+```
 
-![Drag Racing](entreprises.JPG)
+##### 3. Algorithm vs program
+
+```{admonition} algorithm vs program
+**An algorithm** is a general procedure or logical sequence for solving a problem.
+
+**A program** is the actual implementation of an algorithm in a programming language that a computer can execute.
 
 
 ```
 
+**Example** : Here is an algorithm/a Python program that asks the user to enter a number and then calculates its double:
 
-Le présent chapitre introduit les éléments de base da la programmation sous Python. Il introduit les grandes caractéristiques du langage Python en mettant l'accent sur :
 
-Les opérations arithmétique en Python
+**Algorithm**: Calculate Double of a Number
 
-Affectation et variables
+- Step 01 : Start
 
-Types de données de base dans Python
+- Step 02 : Prompt the user to enter a number
 
-Opérateurs logiques et relationnels
+- Step 03 : Read the number
 
-Affichage Lecture d'informations
+- Step 04 : Compute the double of the number (result = number × 2)
 
-#### 2. Premier contact
+- Step 05 : Display the result
 
-Commençons par créer un programme court qui affiche la fameuse phrase « Hello world! ». En Python, on utilise la fonction `print` pour afficher du texte comme output
+- Step 06 : End
+
+**Program** : Calculate Double of a Number
 
 ```python
-print("Hello world!")
+# Ask the user to enter a number
+num = float(input("Enter a number: "))
+
+# Calculate the double
+double_num = num * 2
+
+# Display the result
+print("The double of", num, "is", double_num)
 ```
 
-```
-Hello world!
-```
+**Example 02 :** Here is an algorithm/a program that asks the user to enter their age and then determines whether they are a minor or an adult.
 
-#### 3. Manipulation de chaînes de caractères
+**Algorithm: Check Majority**
 
-On peut  créer une chaîne de caractères en mettant entre guillemets le contenu de la variable et en utilisant le signe égal (`=`). Il est à noter qu'une chaîne de caractères est une classe d’objets qui consiste en une série de caractères
+- Step 01 : Start
 
-```
-print("Bonjour Adam!")
-```
+- Step 02 : Ask the user to enter their age
 
-```
-print('Bonjour Adam!')
-```
+- Step 03 : Read the age
 
-##### 3.1. Concaténer
+- Step 04 : If the age is greater than or equal to 18, display "You are an adult". Otherwise, display "You are a minor"
 
-Concaténer Ce terme signifie “joindre des chaînes de caractères”. Ce processus est appelé la concaténation de chaînes, et s’effectue en utilisant l’opérateur plus `(+)`. 
+- Step 05 : End
 
-```
-print("Bonjour"+"Adam!")
-```
+**Program: Check Majority**
 
-```
-BonjourAdam!
+```Python 
+age = int(input("Enter your age: "))
+
+# Check if the user is a minor or an adult
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
 ```
 
+**Example of an algorithm** : To determine the largest number in a given list, the following steps are followed:
 
-Notez qu’il vous faut indiquer explicitement là où vous voulez que des espaces apparaissent, en les mettant eux aussi entre des guillemets simples.
+1. Start with the first number. 
 
-```
-print("Bonjour "+"Adam!")
-print("Bonjour"+" Adam!")
-print("Bonjour"+" "+"Adam!")
-```
+2. Compare with the next number. 
 
-```
-Bonjour Adam!
-Bonjour Adam!
-Bonjour Adam!
+3. Keep the largest and continue until the end. 
 
-```
+4. Output the largest number.
 
-##### 3.2.  Multiplier
+**Examples of a program** : Below is a Python implementation of the algorithm:
 
-Si vous voulez plusieurs copies d’une chaîne de caractères, utilisez l’opérateur de la multiplication `(*)`.
+```Python 
+numbers = [4, 7, 1, 9, 3]
+
+print(max(numbers))
 
 ```
-print('bonjour ' * 3)
-```
 
-```
-bonjour bonjour bonjour 
-```
+**Key difference :**
 
-##### 3.3.  longueur
-Vous pouvez déterminer le nombre de caractères contenus dans une chaîne de caractères à l’aide de len. Notez que l’espace blanc compte comme un caractère séparé.
+**An algorithm** is language-independent, whereas a program depends on a specific programming language. An algorithm outlines the logic, while a program translates that logic into executable code. 
 
-```
-print(len("bonjour Adam!"))
-```
+**An algorithm** cannot be run directly, but a program can be executed by a computer.
 
-```
-13 
-```
-
-##### 3.4.  Minuscules/majuscules
-Il est parfois utile de convertir une chaîne de caractères en minuscules `.lower()` ou majuscules `.upper()` . Par exemple, il est plus facile pour l’ordinateur de reconnaître que “Bonjour” et “bonjour” sont le même mot si nous standardisons les casses au préalable.
-
-```
-message = "BONJOUR LE MONDE"
-message1 = message.lower()
-print(message1)
-```
-
-```
-bonjour le monde
-```
-```
-message = "bonjour le monde"
-message2 = message.upper()
-print(message2)
-```
-```
-BONJOUR LE MONDE
-```
-
-##### 3.5.  Couper
-
-Si vous voulez couper les parties non désirées au début ou à la fin d’une chaîne de caractères, vous pouvez le faire en créant une nouvelle chaîne à l’aide de l’opérateur `:`. 
-
-```
-message = "Python est un langage de programmation interprété"
-message1= message[0:20]
-print(message1)
-```
-
-```
-Python est un langag
-```
-
-##### 3.6.  Remplacer
-
-Si vous avez besoin de remplacer une sous-chaîne à l’intérieur d’une chaîne, vous pouvez le faire avec la méthode `replace`.
-
-```
-message = "Python est un langage de programmation interprété"
-message1= message.replace("programmation" , "code")
-print(message1)
-```
-
-```
-Python est un langage de code interprété
-```
-
-#### 4.  Les opérations arithmétiques en Python
+##### 4. Steps of an Algorithm
 
 
-Dans sa forme la plus élémentaire, Python peut être utilisé tout simplement comme une `calculatrice`. Il peut réaliser les opérations arithmétiques suivantes :
-
-- Addition : `+`
-
-- Soustraction : `-`
-
-- Multiplication : `*`
-
-- Division entière : `//`
-
-- Division : `/`
-
-- Exponentiation : `**`
-
-- Modulo : `%`
-
-On rappelle que la division entière renvoi le quotient de la division euclidienne et le modulo renvoie le reste de la division euclidienne. Par exemple 7 // 4 est 1; 7 % 4 est 3, 5//2 est 2; 5%2 est 1.
-
-Commençons maintenant à programmer. Nous voulons calculer 1+5, 5-4, 4*3, (10+8)/3, 2**4, 28//6 et 28%6; Comme dans la plupart des langages de programmation, on utilise les symboles suivants pour les opérations mathématiques:
-
-
-```python 
-# addition
-print(1+5)
-
-# soustraction
-print(5-4)
-
-# multiplication
-print(4*3)
-
-# division
-print((10+8)/3)
-
-# exponentiation
-print(2**4)
-
-# division entière
-print(28//6)
-
-# modulo
-print(28%6)
-```
-```
-6
-1
-12
-6.0
-16
-4
-4
-```
-```{admonition} <font color='blue'>Note</font>
+```{admonition} <font color='blue'> Steps of an Algorithm </font>
 :class: tip
-Toute chose commençant par `#` est un commentaire, il sera ignoré par Python. 
 
-Les commentaires sont une bonne manière de savoir ce qu’on fait ou pour qu’une autre personne sache ce qu’on fait.
-```
-Les commentaires usuels:
 
-```
-# Ceci est un commentaire
+- **Inputs**: This step involves identifying the necessary data required to solve the problem.
 
-Les commentaires en fin de ligne:
+- **Processing**: This step determines how the input data is transformed to produce the desired results.
 
-A = 7 # Ceci est un commentaire
+- **Outputs**: Displaying the results. This can include showing numerical values, generating reports, creating graphs, or any other form of presenting the results that helps the user understand the conclusions of the algorithm.
 
 ```
-
-
-En Python, comme dans de nombreux langages de programmation, les opérations mathématiques suivent l'ordre de priorité standard défini par les règles mathématiques. L'ordre d'exécution des opérations mathématiques est souvent mémorisé à l'aide de l'acronyme (Please Excuse My Dear Aunt Sally) PEMDAS, qui signifie :
-
-- P= Parentheses;
-
-- E= Exponents;
-
-- M= Multiplication;
-
-- D= Division;
-
-- A= Addition;
-
-- S= Substraction.
-
-
-
-```{admonition} Exercice
-:class: warning 
-Quelle est, selon vous, le résultat de ces opérations :
-
-$$
-4/2^2 \times (2 +1)
-$$
-
-$$
-4/2^2 \times 2 +1
-$$
-
-$$
-{(4/2)}^2 \times 2 + 1,4/2^{2\times2}+1
-$$
-
-Verifier avec Python.
-
-```
-
-
-
 

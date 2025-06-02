@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tuples en Python &#8212; HEC, Rabat    Prof. Jouilil Youness</title>
+    <title>PRACTICE EXERCISES &#8212; HEM, Rabat    Prof. Jouilil Youness</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -40,9 +40,10 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,11 +52,11 @@
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Manipulation de listes en Python" href="chap14.html" />
-    <link rel="prev" title="Variables et opérations" href="chap12.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CHAPTER 02 : VARIABLES AND ASSIGNMENT" href="chap2.html" />
+    <link rel="prev" title="Table of truth" href="chap12.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="fr">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -79,15 +80,15 @@
         
       
       
-      <img src="_static/logo.JPG" class="logo" alt="logo">
+      <img src="_static/logos.JPG" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">HEC, Rabat    Prof. Jouilil Youness</h1>
+      <h1 class="site-logo" id="site-title">HEM, Rabat    Prof. Jouilil Youness</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -100,7 +101,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="chap1.html">
-   Initiation au langage Python
+   CHAPTER 01 : FUNDAMENTAL CONCEPTS
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -110,39 +111,24 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="chap11.html">
-     Les éléments de base
+     Introduction to Algorithms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap12.html">
-     Variables et opérations
+     Table of truth
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Tuples en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap14.html">
-     Manipulation de listes en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap15.html">
-     Les dictionnaires en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercices1.html">
-     Exercices d’application
+     PRACTICE EXERCISES
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre2.html">
-   Instructions composées
+  <a class="reference internal" href="chap2.html">
+   CHAPTER 02 : VARIABLES AND ASSIGNMENT
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -152,158 +138,25 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="chap21.html">
-     Instructions conditionnelles
+     Introduction to Variables in Algorithms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap22.html">
-     Les Boucles
+     Data Types in Algorithms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap23.html">
-     Listes en compréhension
+     General Structure of an Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="exercices2.html">
-     Exercices d’application
+    <a class="reference internal" href="chap24.html">
+     PRACTICE EXERCISES
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre03.html">
-   Projets pratiques
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre3.html">
-   Les fonctions et les modules
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap31.html">
-     Les fonctions en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap32.html">
-     Les modules en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap33.html">
-     Numpy pour les Tableaux et calcul matriciel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap34.html">
-     Exercices d’application
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre4.html">
-   Python pour la Data Mining
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap41.html">
-     Introduction au Data Mining et à l’apprentissage statistique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap42.html">
-     Préparation des données pour data mining
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap43.html">
-     Analyse exploratoire des données
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre5.html">
-   Modélisation prédictive
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap51.html">
-     Régression linéaire simple avec Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap52.html">
-     Régression linéaire multiple avec Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap53.html">
-     Classification
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap54.html">
-     Arbres de décision
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre6.html">
-   Modélisation descriptive
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap61.html">
-     Clustering
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap62.html">
-     K-means
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre7.html">
-   Réduction de dimension
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre8.html">
-   Évaluation des performances
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre9.html">
-   Etudes de cas
-  </a>
  </li>
 </ul>
 
@@ -330,8 +183,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
-                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -339,7 +192,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -347,10 +200,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/chap13.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -363,12 +216,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
-                    class="fab fa-github"></i>dépôt</button></a>
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap13.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -376,8 +229,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
-        title="Mode plein écran"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -388,28 +241,53 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenu
+                <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   1.  Définition
+  <a class="reference internal nav-link" href="#exercise-1">
+   EXERCISE 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comment-creer-un-tuple">
-   2. Comment créer un tuple ?
+  <a class="reference internal nav-link" href="#exercise-2">
+   EXERCISE 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#affichage">
-   3. Affichage
+  <a class="reference internal nav-link" href="#exercise-3">
+   EXERCISE 3
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concatenation">
-   4. Concaténation
+  <a class="reference internal nav-link" href="#exercise-4">
+   EXERCISE 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-5">
+   EXERCISE 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-6">
+   EXERCISE 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-exercise-7">
+   ADVANCED EXERCISE 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-exercise-8">
+   ADVANCED EXERCISE 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-exercise-9">
+   ADVANCED EXERCISE 9
   </a>
  </li>
 </ul>
@@ -422,34 +300,59 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tuples en Python</h1>
+                <h1>PRACTICE EXERCISES</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Contenu </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   1.  Définition
+  <a class="reference internal nav-link" href="#exercise-1">
+   EXERCISE 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comment-creer-un-tuple">
-   2. Comment créer un tuple ?
+  <a class="reference internal nav-link" href="#exercise-2">
+   EXERCISE 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#affichage">
-   3. Affichage
+  <a class="reference internal nav-link" href="#exercise-3">
+   EXERCISE 3
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concatenation">
-   4. Concaténation
+  <a class="reference internal nav-link" href="#exercise-4">
+   EXERCISE 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-5">
+   EXERCISE 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-6">
+   EXERCISE 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-exercise-7">
+   ADVANCED EXERCISE 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-exercise-8">
+   ADVANCED EXERCISE 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-exercise-9">
+   ADVANCED EXERCISE 9
   </a>
  </li>
 </ul>
@@ -461,71 +364,104 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tuples-en-python">
-<h1>Tuples en Python<a class="headerlink" href="#tuples-en-python" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="definition">
-<h2>1.  Définition<a class="headerlink" href="#definition" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Un tuple en programmation est une structure de données utilisée pour stocker plusieurs éléments de manière ordonnée.</p>
-<p>Un tuple est une liste qui ne peut plus être modifiée. Autrement dit, les tuples ressemblent aux listes, mais on ne peut pas les modifier une fois qu’ils ont été créés (<strong>un objet immuable</strong>).</p>
-<p>On définit tuples avec des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
-</div>
-<div class="section" id="comment-creer-un-tuple">
-<h2>2. Comment créer un tuple ?<a class="headerlink" href="#comment-creer-un-tuple" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour créer un tuple, on utilise les parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> puis on place les éléments à l’intérieur en les séparant par une virgule.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Créer un tuple vide</span>
-<span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">()</span>
-
-</pre></div>
-</div>
-<p>Pour créer un tuple , vous pouvez utiliser la syntaxe suivante:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;famille&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;voiture&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;tuple&#39;&gt;
-</pre></div>
-</div>
-</div>
-<div class="section" id="affichage">
-<h2>3. Affichage<a class="headerlink" href="#affichage" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">famille</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mon_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;droit&quot;</span>
-</pre></div>
-</div>
-<p>On utilisera un tuple pour définir des sortes de constantes qui n’ont donc pas vocation à changer.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="practice-exercises">
+<h1>PRACTICE EXERCISES<a class="headerlink" href="#practice-exercises" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="exercise-1">
+<h2>EXERCISE 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
-<p class="admonition-title"><font color='blue'> Remarque</font></p>
-<p>Les tuples sont surtout utiliser pour définir les constantes qui n’ont donc pas vocation à changer.</p>
-<p>les tuples ne permettent pas d’ajouter, de supprimer ou de modifier des éléments une fois créés. Toute tentative de modification d’un tuple entraînera une erreur.</p>
+<p class="admonition-title">EXERCISE 01</p>
+<ol class="simple">
+<li><p>Draw the truth table for P AND Q.</p></li>
+<li><p>Draw the truth table for P OR Q.</p></li>
+<li><p>Draw the truth table for NOT P.</p></li>
+</ol>
 </div>
 </div>
-<div class="section" id="concatenation">
-<h2>4. Concaténation<a class="headerlink" href="#concatenation" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">tuple2</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ali&#39;</span><span class="p">,</span> <span class="s1">&#39;said&#39;</span><span class="p">,</span> <span class="s1">&#39;Fatima&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tuple1</span> <span class="o">+</span> <span class="n">tuple2</span><span class="p">)</span>
-</pre></div>
+<div class="section" id="exercise-2">
+<h2>EXERCISE 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 02</p>
+<p>In each case, decide whether the statement is true or false.</p>
+<ol class="simple">
+<li><p>136 is a multiple of 17.</p></li>
+<li><p>2 divides 55.</p></li>
+<li><p>136 is a multiple of 17 and 2 divides 55.</p></li>
+<li><p>136 is a multiple of 17 or 2 divides 55.</p></li>
+<li><p>(∃x ∈ R : x + 1 = 0) ∧ (∃x ∈ R : x + 3 = 0)</p></li>
+<li><p>(∃x ∈ R : x + 1 = 0) ∨ (∃x ∈ R : x + 7 = 0)</p></li>
+<li><p>(∀x ∈ R : x + 1 = 0) ∨ (∃x ∈ R : x + 7 = 0)</p></li>
+<li><p>(∀x ∈ R : x + 1 = 0) ∧ (∃x ∈ R : x + 7 = 0)</p></li>
+</ol>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Ali&#39;</span><span class="p">,</span> <span class="s1">&#39;said&#39;</span><span class="p">,</span> <span class="s1">&#39;Fatima&#39;</span><span class="p">)</span>
-</pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tuple3</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Ali&#39;</span><span class="p">,</span> <span class="s1">&#39;said&#39;</span><span class="p">,</span> <span class="s1">&#39;Fatima&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tuple3</span><span class="p">))</span>
-</pre></div>
+<div class="section" id="exercise-3">
+<h2>EXERCISE 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 03</p>
+<p>Make a truth table for the given expression.</p>
+<center>
+<p><span class="math notranslate nohighlight">\( \neg P \wedge Q\)</span></p>
+</center>
 </div>
-<p>Parfois, les tuples ne sont pas entourés de parenthèses, même s’il s’agit quand même de tuples.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="c1">#Ceci revient</span>
-<span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
+</div>
+<div class="section" id="exercise-4">
+<h2>EXERCISE 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 04</p>
+<p>Write the truth table for</p>
+<center>
+<p><span class="math notranslate nohighlight">\( \neg P \vee Q\)</span></p>
+</center>
+</div>
+</div>
+<div class="section" id="exercise-5">
+<h2>EXERCISE 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 05</p>
+<p>Write the truth table for</p>
+<center>
+<p><span class="math notranslate nohighlight">\( \neg ( \neg P \vee Q)\)</span></p>
+</center>
+</div>
+</div>
+<div class="section" id="exercise-6">
+<h2>EXERCISE 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 06</p>
+<p>Write the truth table for</p>
+<center>
+<p><span class="math notranslate nohighlight">\( \neg ( P \wedge \neg Q)\)</span></p>
+</center>
+</div>
+</div>
+<div class="section" id="advanced-exercise-7">
+<h2>ADVANCED EXERCISE 7<a class="headerlink" href="#advanced-exercise-7" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 07</p>
+<p>Write the truth table for</p>
+<center>
+<p><span class="math notranslate nohighlight">\( \neg P \implies Q\)</span></p>
+</center>
+</div>
+</div>
+<div class="section" id="advanced-exercise-8">
+<h2>ADVANCED EXERCISE 8<a class="headerlink" href="#advanced-exercise-8" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 08</p>
+<p>Write the truth table for</p>
+<center>
+<p><span class="math notranslate nohighlight">\( P \implies Q \vee S\)</span></p>
+</center>
+</div>
+</div>
+<div class="section" id="advanced-exercise-9">
+<h2>ADVANCED EXERCISE 9<a class="headerlink" href="#advanced-exercise-9" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">EXERCISE 09</p>
+<p>Write the truth table for</p>
+<center>
+<p><span class="math notranslate nohighlight">\( P \vee Q \implies  \neg S\)</span></p>
+</center>
 </div>
 </div>
 </div>
@@ -555,17 +491,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="chap12.html" title="précédent page">
+    <a class='left-prev' id="prev-link" href="chap12.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">précédent</p>
-            <p class="prev-next-title">Variables et opérations</p>
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Table of truth</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="chap14.html" title="suivant page">
+    <a class='right-next' id="next-link" href="chap2.html" title="next page">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Manipulation de listes en Python</p>
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CHAPTER 02 : VARIABLES AND ASSIGNMENT</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -576,7 +512,7 @@
     <footer class="footer">
   <p>
     
-      Par Prof. Jouilil Youness<br/>
+      By Prof. Jouilil Youness<br/>
     
   </p>
 </footer>

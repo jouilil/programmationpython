@@ -1,2 +1,0 @@
-# Modélisation descriptive
-

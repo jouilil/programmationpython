@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les paramètres de dispersion &#8212; HEM, Rabat    Prof. Jouilil Youness</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="La dataviz avec Python" href="chap53.html" />
+    <link rel="prev" title="Caractéristiques de Tendance Centrale" href="chap522.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="fr">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logos.JPG" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">HEM, Rabat    Prof. Jouilil Youness</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chap1.html">
+   RETURNING TO FUNDAMENTAL CONCEPTS
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap11.html">
+     Introduction to Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap12.html">
+     Variables et opérations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap13.html">
+     Tuples en Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap14.html">
+     Manipulation de listes en Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap15.html">
+     Les dictionnaires en Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Chapitre5.html">
+   Python pour la Data Visualisation unidimensionnelle
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap51.html">
+     Eléments théoriques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap52.html">
+     Tableaux et représentations graphiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap522.html">
+     Caractéristiques de Tendance Centrale
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Les paramètres de dispersion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap53.html">
+     La dataviz avec Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap54.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Chapitre6.html">
+   Vision bidimensionnelle
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap61.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap62.html">
+     K-means
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapitre7.html">
+   Visualisation Interactive avec Plotly
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapitre8.html">
+   Cartographie et Visualisation Géospatiale
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapitre9.html">
+   Etudes de cas
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chap523.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap523.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intervalle-interquartile-et-interdecile">
+   Intervalle interquartile et interdécile
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-fractiles">
+     LES FRACTILES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intervalle-interquartile">
+     Intervalle interquartile
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intervalle-interdecile">
+     Intervalle interdécile
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variance-et-ecart-type">
+   Variance et Ecart-type
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercices-d-applications">
+   Exercices d’applications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-01">
+   Exercice 01
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-02">
+   Exercice 02
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-03">
+   Exercice 03
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-04">
+   Exercice 04
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Les paramètres de dispersion</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intervalle-interquartile-et-interdecile">
+   Intervalle interquartile et interdécile
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-fractiles">
+     LES FRACTILES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intervalle-interquartile">
+     Intervalle interquartile
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intervalle-interdecile">
+     Intervalle interdécile
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variance-et-ecart-type">
+   Variance et Ecart-type
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercices-d-applications">
+   Exercices d’applications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-01">
+   Exercice 01
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-02">
+   Exercice 02
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-03">
+   Exercice 03
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-04">
+   Exercice 04
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="les-parametres-de-dispersion">
+<h1>Les paramètres de dispersion<a class="headerlink" href="#les-parametres-de-dispersion" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="intervalle-interquartile-et-interdecile">
+<h2>Intervalle interquartile et interdécile<a class="headerlink" href="#intervalle-interquartile-et-interdecile" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-fractiles">
+<h3>LES FRACTILES<a class="headerlink" href="#les-fractiles" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-les-fractiles admonition">
+<p class="admonition-title">LES FRACTILES</p>
+<p>On appelle fractiles d’ordre k les (k-1) valeurs qui divisent les observations en k parties d’effectifs égaux.</p>
+<ul class="simple">
+<li><p>3 quartiles <span class="math notranslate nohighlight">\(Q_1\)</span>, <span class="math notranslate nohighlight">\(Q_2\)</span>, <span class="math notranslate nohighlight">\(Q_3\)</span> qui divisent les observations en 4 parties égales.</p></li>
+<li><p>4 quantiles <span class="math notranslate nohighlight">\(q_1\)</span>, <span class="math notranslate nohighlight">\(q_2\)</span>, <span class="math notranslate nohighlight">\(q_3\)</span>, <span class="math notranslate nohighlight">\(q_4\)</span> qui divisent les observations en 5 parties égales.</p></li>
+<li><p>9 déciles <span class="math notranslate nohighlight">\(D_1\)</span>, <span class="math notranslate nohighlight">\(D_2\)</span>, …, <span class="math notranslate nohighlight">\(D_9\)</span> qui divisent les observations en 10 parties égales.</p></li>
+<li><p>99 centiles <span class="math notranslate nohighlight">\(C_1\)</span>, <span class="math notranslate nohighlight">\(C_2\)</span>, …, <span class="math notranslate nohighlight">\(C_{99}\)</span> qui divisent les observations en 100 parties égales</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="intervalle-interquartile">
+<h3>Intervalle interquartile<a class="headerlink" href="#intervalle-interquartile" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-intervalle-interquartile admonition">
+<p class="admonition-title">Intervalle interquartile</p>
+<div class="math notranslate nohighlight">
+\[
+IQ = [Q_1 ; Q_3]
+\]</div>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> <span class="math notranslate nohighlight">\(\vartriangle Q\)</span> = <span class="math notranslate nohighlight">\(Q_3\)</span> - <span class="math notranslate nohighlight">\(Q_1\)</span></p>
+</div>
+</div>
+<div class="section" id="intervalle-interdecile">
+<h3>Intervalle interdécile<a class="headerlink" href="#intervalle-interdecile" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-intervalle-interdecile admonition">
+<p class="admonition-title">Intervalle interdécile</p>
+<div class="math notranslate nohighlight">
+\[
+ID = [D_1; D_9]
+\]</div>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> <span class="math notranslate nohighlight">\(\vartriangle D\)</span> = <span class="math notranslate nohighlight">\(D_9\)</span> - <span class="math notranslate nohighlight">\(D_1\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="variance-et-ecart-type">
+<h2>Variance et Ecart-type<a class="headerlink" href="#variance-et-ecart-type" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-la-variance admonition">
+<p class="admonition-title">La variance</p>
+<p>La variance est un paramètre de dispersion.</p>
+<p>Moyenne arithmétique des carrés des écarts d’une variable statistique par rapport à la moyenne arithmétique de la distribution.</p>
+<p>Soit X est une variable aléatoire. On appelle variance de X, le réel défini par:</p>
+<div class="math notranslate nohighlight">
+\[
+V(x) = \frac{1}{N}\sum^{k}_{i=1}n_{i}(x_{i}-\overline{x})^2 = \sum^{k}_{i=1}f_{i}(x_{i}-\overline{x})^2
+\]</div>
+<p>Nous pouvons aussi montrer que la variance est la moyenne des carrés moins le carré de la moyenne.</p>
+</div>
+<div class="admonition-proprietes admonition">
+<p class="admonition-title">Propriétés</p>
+<p>Nous pouvons aussi montrer que:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V(ax)\)</span> =  <span class="math notranslate nohighlight">\(a^{2}V(x)\)</span> ; a <span class="math notranslate nohighlight">\(\in\)</span> <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V(ax + b)\)</span> =  <span class="math notranslate nohighlight">\(a^{2}V(x)\)</span> ; a, b <span class="math notranslate nohighlight">\(\in\)</span> <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V(x + y)\)</span> =  <span class="math notranslate nohighlight">\(V(x - y)\)</span> = <span class="math notranslate nohighlight">\(V(x)\)</span>  + <span class="math notranslate nohighlight">\(V(y)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V(a)=0\)</span> ; Pour toute constante <span class="math notranslate nohighlight">\(a\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-ecart-type admonition">
+<p class="admonition-title">Ecart-type</p>
+<p>L’écart-type est un paramètre de dispersion qui égale à la racine carrée de la variance.</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(x) = \sqrt{V(x)} = \sqrt{\frac{1}{N}\sum^{k}_{i=1}n_{i}(x_{i}-\overline{x})^2 }
+\]</div>
+</div>
+<div class="admonition-coefficient-de-variation admonition">
+<p class="admonition-title">Coefficient de variation</p>
+<p>Le coefficient de variation (désigné par CV) se définit par la relation suivante :</p>
+<div class="math notranslate nohighlight">
+\[
+CV = \frac{\sigma}{\overline{x}}
+\]</div>
+<p>Il permet de comparer le degré de variation d’un échantillon à un autre, même si les moyennes sont différentes. Il s’exprime généralement en %.</p>
+</div>
+<div class="admonition-box-plot admonition">
+<p class="admonition-title">Box plot</p>
+<p>La box plot ou boîte à moustaches, ou encore la boîte à pattes, est un petit diagramme représentant divers caractères de dispersion d’une série statistique.</p>
+<p><img alt="Drag Racing" src="_images/image_3.JPG" /></p>
+</div>
+<div class="admonition-exercice-5 admonition">
+<p class="admonition-title">Exercice 5</p>
+<p>La répartition des salaires au sein d’une firme peut être résumée comme suit:</p>
+<center>
+<p><img alt="Drag Racing" src="_images/exo_5.JPG" /></p>
+</center>
+<p>a) Calculer l’écart et l’intervalle interquartile.</p>
+<p>b) Calculer la variance.</p>
+<p>c) Déduire l’écart type.</p>
+<p>d) Calculer le CV.</p>
+</div>
+</div>
+<div class="section" id="exercices-d-applications">
+<h2>Exercices d’applications<a class="headerlink" href="#exercices-d-applications" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="exercice-01">
+<h2>Exercice 01<a class="headerlink" href="#exercice-01" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous avez les données suivantes concernant les notes d’un groupe d’étudiants :</p>
+<ul class="simple">
+<li><p>Notes : 3, 8, 12, 15, 17, 19, 20</p></li>
+<li><p>Effectifs : 6, 4, 6, 10, 8, 2, 1</p></li>
+</ul>
+<ol class="simple">
+<li><p>Identifier la variable étudiée et son type.</p></li>
+<li><p>Récapituler ces données dans un tableau statistique</p></li>
+<li><p>Calculez manuellement et sous python les fréquences et les fréquences cumulées croissantes</p></li>
+<li><p>Calculer  manuellement et sous python la moyenne arithmétique simple <span class="math notranslate nohighlight">\(\overline{x}\)</span></p></li>
+<li><p>Calculer manuellement et sous python le mode.</p></li>
+<li><p>Calculer manuellement et sous python la médiane.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-02">
+<h2>Exercice 02<a class="headerlink" href="#exercice-02" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous disposez des données suivantes concernant les températures maximales mensuelles dans une ville :</p>
+<ul class="simple">
+<li><p>Températures (°C) : 18, 22, 25, 27, 30</p></li>
+<li><p>Effectifs (mois correspondants) : 3, 4, 5, 2, 3</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences des différentes températures.</p></li>
+<li><p>Calculez manuellement et sous python les fréquences cumulées croissantes</p></li>
+<li><p>Calculer  manuellement et sous python la moyenne arithmétique simple <span class="math notranslate nohighlight">\(\overline{x}\)</span></p></li>
+<li><p>Calculer manuellement et sous python le mode.</p></li>
+<li><p>Calculer manuellement et sous python la médiane.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-03">
+<h2>Exercice 03<a class="headerlink" href="#exercice-03" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous avez les données suivantes concernant les tailles des individus dans une population :</p>
+<ul class="simple">
+<li><p>Tailles (en cm) : 150-160, 160-170, 170-180, 180-190, 190-200</p></li>
+<li><p>Effectifs (individus dans chaque tranche de taille) : 12, 25, 30, 15, 8</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences des différentes tranches de tailles.</p></li>
+<li><p>Calculez manuellement et sous python les fréquences cumulées croissantes</p></li>
+<li><p>Calculer les valeurs centrales des tranches de tailles.</p></li>
+<li><p>Calculer  manuellement et sous python la moyenne arithmétique simple <span class="math notranslate nohighlight">\(\overline{x}\)</span></p></li>
+<li><p>Calculer manuellement et sous python le mode.</p></li>
+<li><p>Calculer manuellement et sous python la médiane.</p></li>
+<li><p>Représentez la courbe des fréquences cumulées croissantes pour illustrer la répartition cumulative des individus par taille.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-04">
+<h2>Exercice 04<a class="headerlink" href="#exercice-04" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Les données suivantes concernent la durée des trajets domicile-travail (en minutes) d’une population d’employés :</p>
+<ul class="simple">
+<li><p>Durée des trajets (en minutes) : 0-10, 10-20, 20-30, 30-40, 40-50</p></li>
+<li><p>Effectifs (employés correspondant à chaque intervalle de temps) : 20, 50, 40, 25, 10</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences pour chaque intervalle de durée de trajet.</p></li>
+<li><p>Créez la représentation graphique adéquate pour afficher la répartition des employés en fonction de la durée des trajets.</p></li>
+<li><p>Calculez les caractéristiques de tendence centrales</p></li>
+<li><p>Représentez la courbe des fréquences cumulées croissantes pour illustrer la répartition cumulative des individus par durée de trajet.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="chap522.html" title="précédent page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">précédent</p>
+            <p class="prev-next-title">Caractéristiques de Tendance Centrale</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="chap53.html" title="suivant page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">La dataviz avec Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Prof. Jouilil Youness<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

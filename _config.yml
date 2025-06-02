@@ -1,10 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: HEC, Rabat    Prof. Jouilil Youness
+title: HEM, Rabat    Prof. Jouilil Youness
 author: Prof. Jouilil Youness
-copyright: "2024"
-logo: logo.JPG
+copyright: "2025"
+logo: logos.JPG
 
 
 # Force re-execution of notebooks on each build.
@@ -22,8 +22,8 @@ bibtex_bibfiles:
   - references.bib 
 sphinx:
  config:
-    html_search_language: fr
-    language: fr
+    html_search_language: en
+    language: en
     html_show_copyright: false 
 
 # Information about where the book exists on the web

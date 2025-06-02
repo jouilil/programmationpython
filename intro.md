@@ -1,76 +1,63 @@
 # Introduction
-### IA Management, HEC
-### Année universitaire 2024-2025
+### HEM, Rabat
+### Academic Year 2024-2025
 #### Prof. Jouilil Youness
-##### Kenitra, Octobre 2024
+##### Rabat, March 2025
 
 
-```{admonition} Remarques
-- Version d'octobre 2024. En cours d’amélioration (à ne pas diffuser!)
-- Support du cours d'Informatique, distribué gratuitement. 
-- Merci de signaler les erreurs éventuelles!
+
+```{admonition} Remarks
+- IT for business course material, provided for free.
+
+- Please report any potential errors.
 ```
 
-```{admonition} Evaluation
-- Devoir Surveillés (DS1, DS2, ...etc);
-- Exposés;
-- Devoirs libres;
-- Travaux pratiques ;
-- Assiduité et participation ;
-- Examen Final.
+```{admonition} Assignments
+The module assessment will be based on :
+
+- Project;  
+
+- Tests (1 to 2) ;
+
+- Attendance and participation;  
+
+- Final exam. 
 ```
 
+```{admonition} Required Previous Knowledge
 
-```{admonition} Objectifs
+Before engaging with this module, it is essential to have a solid foundation in key areas that will support your understanding of the course material. The required knowledge includes :
 
-- Compréhension des Fondamentaux de la Programmation 
+- Applied mathematics concepts (linear algebra, etc.)
 
-- Compréhension de l'Écosystème Python
+- Statistics concepts (descriptive and inferential)
 
-- Apprendre à manipuler différents types de données
+- Probability concepts (mathematical expectation, variance, covariance, etc.)
 
-- Pratique de la Résolution de Problèmes
+- Basic computer skills (Excel)
 
-- Compréhension des Concepts de Base de l'Analyse de Données
-
-```
-
-```{admonition} Python
-:class: attention
-Python est couramment utilisé, entre autres, pour le développement des sites Web et des logiciels, l’automatisation des tâches, machine learning, data science, l’analyse des données et la visualisation des données. 
-
-Comme il est relativement facile à apprendre, Python a été adopté par de nombreux non-programmeurs tels que des comptables et des scientifiques, pour une variété de tâches quotidiennes, comme l’organisation des finances.
-
-Le présent cours est une introduction à ce langage de programmation et à l'analyse de données sous Python. Il va être utile à toute personne désirant creuser davantage dans python pour attaquer l’une des disciplines susmentionnées. Il traitera les axes suivants :
-
-- Introduction ;
-
-- Eléments de base ;
-
-- Instructions conditionnelles et boucles ;
-
-- Types de données composites (chaines des caractères, listes, tuples, dictionnaires, ensembles);
-
-- Analyse Statistique de Base;
-
-- Visualisation de Données avec Matplotlib et Seaborn;
-
-- Manipulation de Données avec Pandas.
 ```
 
 
+```{admonition} Learning Objectives
 
-```{admonition} Installer Python sur votre machine
-:class: attention
+The first part of this course is intended to make students familiar with some basic algorithms and their efficiency analysis. Specifically, the course aims to:
 
-Vous pouvez télécharger la dernière version de Python pour Windows sur `le site officiel de Python`.  https://www.python.org/downloads/
+- **Understand algorithmic concepts**: Familiarize students with the foundational principles of algorithms, including the basics of algorithm design, analysis, and the role of data structures in problem-solving.
 
-![Drag Racing](python.JPG)
+- **Analyze algorithm efficiency**: Teach students how to evaluate algorithms based on their time and space complexity, using asymptotic analysis to assess performance.
 
+- **Master fundamental data structures**: Provide in-depth understanding of essential data structures and their role in optimizing algorithm performance.
 
-Une fois installation est terminée, vous pouvez utiliser `IDLE` (Integrated Development and Learning Environment), l’environnement de développement intégré de Python. Il est automatiquement installé lors de la configuration du langage de script. Pour ce faire, ouvrez la fonction de recherche de Windows et tapez « IDLE ». Vous démarrez IDLE shell à l’aide du résultat correspondant et pouvez vous lancer dans la programmation Python.
+- **Design algorithms for common computational problems**: Enable students to design algorithms to solve practical problems efficiently, focusing on sorting, searching, graph traversal, and dynamic programming.
 
-![Drag Racing](idle.JPG)
+- **Implement algorithms in practice**: Provide students with hands-on experience in implementing a range of algorithms using programming languages, ensuring the correct and efficient functioning of these algorithms.
+
+- **Develop problem-solving skills**: Foster the ability to break down complex problems into smaller, more manageable components, and use algorithmic techniques to solve them efficiently.
+
+- **Explore advanced algorithmic topics**: Introduce students to more complex topics such as greedy algorithms, divide and conquer strategies, and network flows, preparing them for more advanced studies in algorithm theory and applications.
 
 ```
+
+
 

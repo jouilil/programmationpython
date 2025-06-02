@@ -1,2 +1,0 @@
-# Réduction de dimension
-

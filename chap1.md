@@ -1,23 +1,13 @@
-# Initiation au langage Python
+# FUNDAMENTAL CONCEPTS
 
 
-#### Rabat, Octobre 2024
+#### Rabat, March 2025
 
-```{admonition} Remarque
+```{admonition} Remarks
 :class: attention
 
-- Version d'octobre 2024. <font color='red'>En cours d’amélioration (à ne pas diffuser!)</font>
-- Support du cours d'Informatique, distribué gratuitement. Merci de signaler les erreurs éventuelles
+- IT for business course material, <font color='red'> provided for free.</font>
+
+- Please report any potential errors.
+
 ```
-
-Le présent chapitre introduit les éléments de base da la programmation sous Python. Il introduit les grandes caractéristiques du langage Python en mettant l’accent sur :
-
-- Les opérations arithmétique en Python
-
-- Affectation et variables
-
-- Types de données de base dans Python
-
-- Opérateurs logiques et relationnels
-
-- Affichage Lecture d’informations
