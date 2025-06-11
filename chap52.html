@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Régression linéaire multiple avec Python &#8212; HEC, Rabat    Prof. Jouilil Youness</title>
+    <title>Tableaux et représentations graphiques &#8212; HEM, Rabat    Prof. Jouilil Youness</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -43,6 +43,8 @@
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Classification" href="chap53.html" />
-    <link rel="prev" title="Régression linéaire simple avec Python" href="chap51.html" />
+    <link rel="next" title="Caractéristiques de Tendance Centrale" href="chap522.html" />
+    <link rel="prev" title="Eléments théoriques" href="chap51.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="fr">
     
@@ -79,10 +81,10 @@
         
       
       
-      <img src="_static/logo.JPG" class="logo" alt="logo">
+      <img src="_static/logos.JPG" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">HEC, Rabat    Prof. Jouilil Youness</h1>
+      <h1 class="site-logo" id="site-title">HEM, Rabat    Prof. Jouilil Youness</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -100,7 +102,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="chap1.html">
-   Initiation au langage Python
+   RETURNING TO FUNDAMENTAL CONCEPTS
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -110,7 +112,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="chap11.html">
-     Les éléments de base
+     Introduction to Algorithms
     </a>
    </li>
    <li class="toctree-l2">
@@ -133,147 +135,56 @@
      Les dictionnaires en Python
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercices1.html">
-     Exercices d’application
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre2.html">
-   Instructions composées
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap21.html">
-     Instructions conditionnelles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap22.html">
-     Les Boucles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap23.html">
-     Listes en compréhension
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercices2.html">
-     Exercices d’application
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre03.html">
-   Projets pratiques
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre3.html">
-   Les fonctions et les modules
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap31.html">
-     Les fonctions en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap32.html">
-     Les modules en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap33.html">
-     Numpy pour les Tableaux et calcul matriciel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap34.html">
-     Exercices d’application
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre4.html">
-   Python pour la Data Mining
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap41.html">
-     Introduction au Data Mining et à l’apprentissage statistique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap42.html">
-     Préparation des données pour data mining
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap43.html">
-     Analyse exploratoire des données
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Chapitre5.html">
-   Modélisation prédictive
+   Python pour la Data Visualisation unidimensionnelle
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="chap51.html">
-     Régression linéaire simple avec Python
+     Eléments théoriques
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Régression linéaire multiple avec Python
+     Tableaux et représentations graphiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap522.html">
+     Caractéristiques de Tendance Centrale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chap523.html">
+     Les paramètres de dispersion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap53.html">
-     Classification
+     La dataviz avec Python
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap54.html">
-     Arbres de décision
+     Exercices d’application
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Chapitre6.html">
-   Modélisation descriptive
+   Vision bidimensionnelle
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -292,12 +203,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapitre7.html">
-   Réduction de dimension
+   Visualisation Interactive avec Plotly
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapitre8.html">
-   Évaluation des performances
+   Cartographie et Visualisation Géospatiale
   </a>
  </li>
  <li class="toctree-l1">
@@ -393,14 +304,73 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elements-theoriques">
-   1. Eléments théoriques
+  <a class="reference internal nav-link" href="#variables-qualitatives-nominales-et-ordinales">
+   Variables qualitatives nominales et ordinales
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-qualitatives-nominales">
+     VARIABLES QUALITATIVES NOMINALES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-qualitatives-ordinales">
+     VARIABLES QUALITATIVES ORDINALES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-quantitatives-discretes">
+     VARIABLES QUANTITATIVES DISCRÈTES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-quantitative-continue">
+     Variable quantitative continue
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etudes-de-cas-sur-python">
-   2. Études de cas sur Python
+  <a class="reference internal nav-link" href="#exercices-d-application">
+   Exercices d’application
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-01">
+     Exercice 01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-02">
+     Exercice 02
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-03">
+     Exercice 03
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-04">
+     Exercice 04
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-05">
+     Exercice 05
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 05
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-06">
+     Exercice 06
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -412,7 +382,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Régression linéaire multiple avec Python</h1>
+                <h1>Tableaux et représentations graphiques</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -423,14 +393,73 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elements-theoriques">
-   1. Eléments théoriques
+  <a class="reference internal nav-link" href="#variables-qualitatives-nominales-et-ordinales">
+   Variables qualitatives nominales et ordinales
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-qualitatives-nominales">
+     VARIABLES QUALITATIVES NOMINALES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-qualitatives-ordinales">
+     VARIABLES QUALITATIVES ORDINALES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-quantitatives-discretes">
+     VARIABLES QUANTITATIVES DISCRÈTES
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-quantitative-continue">
+     Variable quantitative continue
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etudes-de-cas-sur-python">
-   2. Études de cas sur Python
+  <a class="reference internal nav-link" href="#exercices-d-application">
+   Exercices d’application
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-01">
+     Exercice 01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-02">
+     Exercice 02
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-03">
+     Exercice 03
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-04">
+     Exercice 04
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-05">
+     Exercice 05
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice 05
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-06">
+     Exercice 06
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -441,13 +470,334 @@
             
               <div>
                 
-  <div class="section" id="regression-lineaire-multiple-avec-python">
-<h1>Régression linéaire multiple avec Python<a class="headerlink" href="#regression-lineaire-multiple-avec-python" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="elements-theoriques">
-<h2>1. Eléments théoriques<a class="headerlink" href="#elements-theoriques" title="Lien permanent vers ce titre">¶</a></h2>
+  <div class="section" id="tableaux-et-representations-graphiques">
+<h1>Tableaux et représentations graphiques<a class="headerlink" href="#tableaux-et-representations-graphiques" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les tableaux et les représentations graphiques sont des outils incontournables pour organiser, synthétiser et illustrer les données recueillies. Les tableaux permettent de structurer les données de manière ordonnée, facilitant ainsi leur analyse et comparaison. Quant aux graphiques, ils offrent une visualisation intuitive des tendances et des relations entre les variables, rendant les résultats plus accessibles et compréhensibles.</p>
+<p>Les tableaux et graphiques sont particulièrement utiles pour représenter des variables qualitatives (nominales ou ordinales) et des variables quantitatives (discrètes ou continues). Ils permettent de mettre en évidence les fréquences, fréquences cumulées, moyennes, et autres mesures statistiques, et de faciliter la prise de décision en offrant des perspectives visuelles claires.</p>
+<p>Dans ce chapitre, nous aborderons les principales techniques pour élaborer des tableaux efficaces et des graphiques pertinents, en utilisant des exemples pratiques pour illustrer les concepts de base et les différentes méthodes de présentation des données.</p>
+<div class="section" id="variables-qualitatives-nominales-et-ordinales">
+<h2>Variables qualitatives nominales et ordinales<a class="headerlink" href="#variables-qualitatives-nominales-et-ordinales" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="variables-qualitatives-nominales">
+<h3>VARIABLES QUALITATIVES NOMINALES<a class="headerlink" href="#variables-qualitatives-nominales" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les variables qualitatives (nominales et ordinales) peuvent être représentées visuellement à l’aide de :</p>
+<div class="admonition-visualisation-des-variables-qualitatives admonition">
+<p class="admonition-title">Visualisation des Variables Qualitatives </p>
+<ul class="simple">
+<li><p>Diagramme circulaire ou camembert (Pie Chart)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\theta_{i} = 360*\textit{fréquence_{i}}
+\]</div>
+<ul class="simple">
+<li><p>Diagramme demi-circulaire</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\theta_{i} = 180*\textit{fréquence_{i}}
+\]</div>
+<ul class="simple">
+<li><p>Diagramme en barres (Bar Chart)</p></li>
+<li><p>Diagramme en barres horizontales (Horizontal Bar Chart)</p></li>
+</ul>
 </div>
-<div class="section" id="etudes-de-cas-sur-python">
-<h2>2. Études de cas sur Python<a class="headerlink" href="#etudes-de-cas-sur-python" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-frequence-et-frequences-cumulees admonition">
+<p class="admonition-title">Fréquence et Fréquences cumulées</p>
+<p>Fréquence: La fréquence d’une modalité est l’effectif divisé par le nombre d’unités d’observation.</p>
+<div class="math notranslate nohighlight">
+\[
+f_{i} =  \frac{n_{i}}{N}
+\]</div>
+<p>Fréquences cumulées</p>
+<div class="math notranslate nohighlight">
+\[
+F_{i} = \sum^{i}_{k=1} f_{k}
+\]</div>
+</div>
+<div class="admonition-exercice-1 admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>On donne la variable suivante qui correspond à la couleur préférée par les étudiants d’une classe donnée.</p>
+<center>
+<p><img alt="Drag Racing" src="_images/exo_1.JPG" /></p>
+</center>
+<p><strong>1). Identification</strong></p>
+<p>1.1)  Identifier la variable étudiée.</p>
+<p>1.2) Déterminer le type de cette variable</p>
+<p><strong>2). Traitement Manuel :</strong></p>
+<p>2.1) Remplir le tableau 2 par les valeurs correspondantes</p>
+<p>2.2) Construire la représentation graphique adéquate des fréquences associées</p>
+<p><strong>3). Traitement avec le Langage Python :</strong></p>
+<p>3.1) Compléter le tableau 2 à l’aide de Python en affichant les valeurs correspondantes.</p>
+<p>3.2) Générer la représentation graphique des fréquences associées à l’aide de Python.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Graphique en barres</span>
+<span class="n">couleur</span> <span class="o">=</span><span class="p">{</span><span class="s2">&quot;Vert&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Rouge&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Noir&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Bleu&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Blanc&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="n">couleur</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;couleur&quot;</span><span class="p">:</span><span class="n">couleur</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="s2">&quot;val&quot;</span><span class="p">:</span><span class="n">couleur</span><span class="o">.</span><span class="n">values</span><span class="p">()})</span>
+<span class="n">couleur</span><span class="p">[</span><span class="s2">&quot;Freq&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">couleur</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">couleur</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">couleur</span><span class="p">[</span><span class="s1">&#39;couleur&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="n">couleur</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;modalités&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;frequences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;diagramme en barre des fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Graphique circulaire</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">couleur</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="n">couleur</span><span class="p">[</span><span class="s1">&#39;couleur&#39;</span><span class="p">],</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;diagramme circulaire des fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Diagramme en barres horizontales</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">couleur</span><span class="p">[</span><span class="s1">&#39;couleur&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="n">couleur</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;frequences en %&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;modalités&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Diagramme en barres horizontales des fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">couleur</span>
+
+</pre></div>
+</div>
+<center>
+<p><img alt="Drag Racing" src="_images/G1.JPG" /></p>
+<p><img alt="Drag Racing" src="_images/G11.JPG" /></p>
+<p><img alt="Drag Racing" src="_images/G2.JPG" /></p>
+</center>
+</div>
+<div class="section" id="variables-qualitatives-ordinales">
+<h3>VARIABLES QUALITATIVES ORDINALES<a class="headerlink" href="#variables-qualitatives-ordinales" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-exercice-2 admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>100 personnes ont été interrogées sur leur addiction au chocolat. Les réponses se déclinent comme suit:</p>
+<center>
+<p><img alt="Drag Racing" src="_images/exo_2.JPG" /></p>
+</center>
+<p><strong>1). Identification</strong></p>
+<p>1.1)  Identifier la variable étudiée.</p>
+<p>1.2) Déterminer le type de cette variable.</p>
+<p><strong>2). Traitement Manuel :</strong></p>
+<p>2.1) Remplir le tableau par les valeurs correspondantes</p>
+<p>2.2) Construire la représentation graphique adéquate des effectifs et des fréquences associées</p>
+<p><strong>3). Traitement avec le Langage Python :</strong></p>
+<p>3.1) Compléter le tableau à l’aide de Python en affichant les valeurs correspondantes.</p>
+<p>3.2) Générer la représentation graphique  adéquate des effectifs et des fréquences à l’aide de Python.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># graphique : Camembert</span>
+<span class="n">preference</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;A&quot;</span> <span class="p">:</span> <span class="mi">20</span> <span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mi">42</span> <span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">preference</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">preference</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">preference</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;camembert des fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1"># Diagramme en barres horizontales</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">preference</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span><span class="n">preference</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Diagramme en barres horizontales des fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Diagramme en barres</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">preference</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span><span class="n">preference</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Diagramme en barre des fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;les préferences&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Les fréquences en %&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<center>
+<p><img alt="Drag Racing" src="_images/G3.JPG" /></p>
+<p><img alt="Drag Racing" src="_images/G31.JPG" /></p>
+<p><img alt="Drag Racing" src="_images/G4.JPG" /></p>
+</center>
+</div>
+<div class="section" id="variables-quantitatives-discretes">
+<h3>VARIABLES QUANTITATIVES DISCRÈTES<a class="headerlink" href="#variables-quantitatives-discretes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Comme représentation graphique d’une variable quantitative discrète, nous utilisons <strong>le diagramme en bâtons des effectifs ou des fréquences</strong>.</p>
+<p><strong>Exemples</strong>: les notes obtenues par les étudiants d’une classe donnée</p>
+<center>
+<p><img alt="Drag Racing" src="_images/image_1.JPG" /></p>
+</center>
+<div class="admonition-exercice-3 admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>On donne les notes suivantes:</p>
+<center>
+<p>0,0,0, 4, 5, 8,8,8,8, 10,10,10,10, 14, 16, 18, 20,20,20,20</p>
+</center>
+<p><strong>1). Identification</strong></p>
+<p>1.1) Récapituler l’information dans un tableau.</p>
+<p>1.2)  Identifier la variable étudiée.</p>
+<p>1.3) Déterminer le type de cette variable.</p>
+<p><strong>2). Traitement Manuel :</strong></p>
+<p>2.1) Calculer les fréquences associés à chaque note.</p>
+<p>2.1) Construire la représentation graphique adéquate des effectifs et des fréquences associées.</p>
+<p><strong>3). Traitement avec le Langage Python :</strong></p>
+<p>3.1) Compléter le tableau à l’aide de Python en affichant les valeurs correspondantes.</p>
+<p>3.2) Générer la représentation graphique  adéquate des effectifs et des fréquences à l’aide de Python.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">series</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;series&quot;</span><span class="p">:</span> <span class="n">series</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span><span class="s2">&quot;effectifs&quot;</span><span class="p">:</span> <span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">()})</span>
+<span class="c1">#  tableau récapitulatif des fréquences et des freq. cumulées</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;freq&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;effectifs&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;effectifs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;freq cum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;freq&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="c1"># Diagramme en bâtons des effectifs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;series&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;effectifs&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;series&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;effectifs&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Diagramme en bâtons des effectifs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;les notes&quot;</span><span class="p">)</span> <span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;les effectifs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># diagramme des freq cum croissantes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;series&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;freq cum&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;skyblue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Diagramme des freq cum croissantes&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Les notes&quot;</span><span class="p">)</span> <span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;les fréq cum croissantes en %&quot;</span><span class="p">)</span>
+<span class="c1"># Pour contrôler les limites des axes, on utilise la fonction axis()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mi">22</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">110</span><span class="p">)</span>
+<span class="c1"># Pour rajouter une grille, on utilise la fonction grid()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<center>
+<p><img alt="Drag Racing" src="_images/G5.JPG" /></p>
+<p><img alt="Drag Racing" src="_images/G6.JPG" /></p>
+</center>
+</div>
+<div class="section" id="variable-quantitative-continue">
+<h3>Variable quantitative continue<a class="headerlink" href="#variable-quantitative-continue" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Comme représentation graphique d’une Var. quant. continue, nous utilisons <strong>l’histogramme</strong></p>
+<center>
+<p><img alt="Drag Racing" src="_images/image_2.PNG" /></p>
+</center>
+<div class="admonition-exercice admonition">
+<p class="admonition-title">Exercice</p>
+<p>La répartition des salaires au sein d’une firme peut être résumée comme suit:</p>
+<center>
+<p><img alt="Drag Racing" src="_images/exo_5.JPG" /></p>
+</center>
+<p><strong>1). Identification</strong></p>
+<p>1.1)  Identifier la variable étudiée.</p>
+<p>1.2) Déterminer le type de cette variable.</p>
+<p><strong>2). Traitement Manuel :</strong></p>
+<p>2.1) Calculer les fréquences associés à chaque note.</p>
+<p>2.1) Construire la représentation graphique adéquate des effectifs et des fréquences associées.</p>
+<p><strong>3). Traitement avec le Langage Python :</strong></p>
+<p>3.1) Compléter le tableau à l’aide de Python en affichant les valeurs correspondantes.</p>
+<p>3.2) Générer la représentation graphique  adéquate des effectifs et des fréquences à l’aide de Python.</p>
+</div>
+</div>
+</div>
+<div class="section" id="exercices-d-application">
+<h2>Exercices d’application<a class="headerlink" href="#exercices-d-application" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="exercice-01">
+<h3>Exercice 01<a class="headerlink" href="#exercice-01" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous disposez des données suivantes concernant la satisfaction des clients d’un service :</p>
+<ul class="simple">
+<li><p>Niveaux de satisfaction : Très insatisfait, Insatisfait, Neutre, Satisfait, Très satisfait</p></li>
+<li><p>Effectifs (clients correspondants) : 15, 30, 50, 40, 20</p></li>
+</ul>
+<ol class="simple">
+<li><p>Identifier la variable étudiée et son type.</p></li>
+<li><p>Récapituler ces données dans un tableau statistique</p></li>
+<li><p>Calculez les fréquences pour chaque niveau de satisfaction.</p></li>
+<li><p>Créez un diagramme en barre pour afficher la répartition des clients en fonction de leur niveau de satisfaction.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-02">
+<h3>Exercice 02<a class="headerlink" href="#exercice-02" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Les données suivantes concernent le niveau d’éducation atteint par un groupe d’individus :</p>
+<ul class="simple">
+<li><p>Niveaux d’éducation : Aucun, Primaire, Secondaire, Universitaire, Supérieur</p></li>
+<li><p>Effectifs (individus correspondants) : 5, 15, 20, 40, 30</p></li>
+</ul>
+<ol class="simple">
+<li><p>Identifier la variable étudiée et son type.</p></li>
+<li><p>Récapituler ces données dans un tableau statistique</p></li>
+<li><p>Calculez les fréquences pour chaque niveau d’éducation.</p></li>
+<li><p>Créez la représentation adéquate pour visualiser la répartition des individus en fonction de leur niveau d’éducation.</p></li>
+<li><p>Calculez la fréquence cumulée pour chaque niveau d’éducation et générez un graphique pour cette fréquence cumulée.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-03">
+<h3>Exercice 03<a class="headerlink" href="#exercice-03" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous avez les données suivantes concernant les notes d’un groupe d’étudiants :</p>
+<ul class="simple">
+<li><p>Notes : 8, 12, 15, 17, 19</p></li>
+<li><p>Effectifs : 4, 6, 10, 8, 2</p></li>
+</ul>
+<ol class="simple">
+<li><p>Identifier la variable étudiée et son type.</p></li>
+<li><p>Récapituler ces données dans un tableau statistique</p></li>
+<li><p>Calculez les fréquences des notes.</p></li>
+<li><p>Créez un diagramme en bâtons pour afficher la répartition des effectifs.</p></li>
+<li><p>Calculez la fréquence cumulée et affichez un graphique pour les fréquences cumulées.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-04">
+<h3>Exercice 04<a class="headerlink" href="#exercice-04" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous disposez des données suivantes concernant les préférences de couleurs dans un groupe d’individus :</p>
+<ul class="simple">
+<li><p>Couleurs : Rouge, Bleu, Vert, Jaune, Noir</p></li>
+<li><p>Effectifs (individus correspondants) : 15, 20, 30, 10, 25</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences pour chaque couleur.</p></li>
+<li><p>Créez le graphique adéquat pour visualiser la répartition des individus en fonction des couleurs préférées.</p></li>
+<li><p>Calculez la fréquence cumulée des couleurs et affichez un graphique pour ces fréquences cumulées.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-05">
+<h3>Exercice 05<a class="headerlink" href="#exercice-05" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous disposez des données suivantes concernant les températures maximales mensuelles dans une ville :</p>
+<ul class="simple">
+<li><p>Températures (°C) : 18, 22, 25, 27, 30</p></li>
+<li><p>Effectifs (mois correspondants) : 3, 4, 5, 2, 3</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences des différentes températures.</p></li>
+<li><p>Créez un diagramme en bâtons pour visualiser la répartition des effectifs en fonction des températures.</p></li>
+<li><p>Calculez la fréquence cumulée et générez un graphique pour afficher les fréquences cumulées.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Exercice 05<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Vous avez les données suivantes concernant les tailles des individus dans une population :</p>
+<ul class="simple">
+<li><p>Tailles (en cm) : 150-160, 160-170, 170-180, 180-190, 190-200</p></li>
+<li><p>Effectifs (individus dans chaque tranche de taille) : 12, 25, 30, 15, 8</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences des différentes tranches de tailles.</p></li>
+<li><p>Créez un histogramme pour illustrer la répartition des individus en fonction des tailles.</p></li>
+<li><p>Calculez et affichez la fréquence cumulée des tailles, puis générez un graphique pour ces fréquences cumulées.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-06">
+<h3>Exercice 06<a class="headerlink" href="#exercice-06" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Exercice</p>
+<p>Les données suivantes concernent la durée des trajets domicile-travail (en minutes) d’une population d’employés :</p>
+<ul class="simple">
+<li><p>Durée des trajets (en minutes) : 0-10, 10-20, 20-30, 30-40, 40-50</p></li>
+<li><p>Effectifs (employés correspondant à chaque intervalle de temps) : 20, 50, 40, 25, 10</p></li>
+</ul>
+<ol class="simple">
+<li><p>Calculez les fréquences pour chaque intervalle de durée de trajet.</p></li>
+<li><p>Créez la représentation graphique adéquate pour afficher la répartition des employés en fonction de la durée des trajets.</p></li>
+<li><p>Calculez et affichez la fréquence cumulée des durées de trajets, puis générez un graphique pour ces fréquences cumulées.</p></li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 
@@ -480,13 +830,13 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">précédent</p>
-            <p class="prev-next-title">Régression linéaire simple avec Python</p>
+            <p class="prev-next-title">Eléments théoriques</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="chap53.html" title="suivant page">
+    <a class='right-next' id="next-link" href="chap522.html" title="suivant page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Classification</p>
+        <p class="prev-next-title">Caractéristiques de Tendance Centrale</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

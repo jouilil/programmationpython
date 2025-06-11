@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instructions conditionnelles &#8212; HEC, Rabat    Prof. Jouilil Youness</title>
+    <title>Introduction to Variables in Algorithms &#8212; HEM, Rabat    Prof. Jouilil Youness</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -40,9 +40,10 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,11 +52,11 @@
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Les Boucles" href="chap22.html" />
-    <link rel="prev" title="Instructions composées" href="Chapitre2.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Types in Algorithms" href="chap22.html" />
+    <link rel="prev" title="CHAPTER 02 : VARIABLES AND ASSIGNMENT" href="chap2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="fr">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -79,15 +80,15 @@
         
       
       
-      <img src="_static/logo.JPG" class="logo" alt="logo">
+      <img src="_static/logos.JPG" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">HEC, Rabat    Prof. Jouilil Youness</h1>
+      <h1 class="site-logo" id="site-title">HEM, Rabat    Prof. Jouilil Youness</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -100,7 +101,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="chap1.html">
-   Initiation au langage Python
+   CHAPTER 01 : FUNDAMENTAL CONCEPTS
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -110,39 +111,24 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="chap11.html">
-     Les éléments de base
+     Introduction to Algorithms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap12.html">
-     Variables et opérations
+     Table of truth
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap13.html">
-     Tuples en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap14.html">
-     Manipulation de listes en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap15.html">
-     Les dictionnaires en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercices1.html">
-     Exercices d’application
+     PRACTICE EXERCISES
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="Chapitre2.html">
-   Instructions composées
+  <a class="reference internal" href="chap2.html">
+   CHAPTER 02 : VARIABLES AND ASSIGNMENT
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -152,158 +138,25 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Instructions conditionnelles
+     Introduction to Variables in Algorithms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap22.html">
-     Les Boucles
+     Data Types in Algorithms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chap23.html">
-     Listes en compréhension
+     General Structure of an Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="exercices2.html">
-     Exercices d’application
+    <a class="reference internal" href="chap24.html">
+     PRACTICE EXERCISES
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre03.html">
-   Projets pratiques
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre3.html">
-   Les fonctions et les modules
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap31.html">
-     Les fonctions en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap32.html">
-     Les modules en Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap33.html">
-     Numpy pour les Tableaux et calcul matriciel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap34.html">
-     Exercices d’application
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre4.html">
-   Python pour la Data Mining
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap41.html">
-     Introduction au Data Mining et à l’apprentissage statistique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap42.html">
-     Préparation des données pour data mining
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap43.html">
-     Analyse exploratoire des données
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre5.html">
-   Modélisation prédictive
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap51.html">
-     Régression linéaire simple avec Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap52.html">
-     Régression linéaire multiple avec Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap53.html">
-     Classification
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap54.html">
-     Arbres de décision
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapitre6.html">
-   Modélisation descriptive
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap61.html">
-     Clustering
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chap62.html">
-     K-means
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre7.html">
-   Réduction de dimension
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre8.html">
-   Évaluation des performances
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapitre9.html">
-   Etudes de cas
-  </a>
  </li>
 </ul>
 
@@ -330,8 +183,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
-                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -339,7 +192,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -347,10 +200,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/chap21.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -363,12 +216,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
-                    class="fab fa-github"></i>dépôt</button></a>
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap21.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -376,8 +229,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
-        title="Mode plein écran"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -388,24 +241,113 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenu
+                <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instruction-conditionnelle-if">
-   1.1 Instruction conditionnelle if
+  <a class="reference internal nav-link" href="#definition-of-variables">
+   1.  Definition of variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instruction-conditionnelle-if-else">
-   1.2 Instruction conditionnelle if else
+  <a class="reference internal nav-link" href="#key-characteristics-of-variables">
+   2. Key Characteristics of Variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instruction-conditionnelle-if-elseif">
-   1.3 Instruction conditionnelle if elseif
+  <a class="reference internal nav-link" href="#arithmetic-operators">
+   3. Arithmetic Operators
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#addition">
+     3.1. Addition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subtraction">
+     3.2. Subtraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication">
+     3.3. Multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division">
+     3.4. Division
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulus">
+     3.5. Modulus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exponentiation">
+     3.6. Exponentiation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   4. Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-01">
+     Exercise 01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-02">
+     Exercise 02
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-03">
+     Exercise 03
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-04">
+     Exercise 04
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-05">
+     Exercise 05
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-06">
+     Exercise 06
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-07">
+     Exercise 07
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-08">
+     Exercise 08
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-09">
+     Exercise 09
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-10">
+     Exercise 10
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -417,30 +359,119 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Instructions conditionnelles</h1>
+                <h1>Introduction to Variables in Algorithms</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Contenu </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instruction-conditionnelle-if">
-   1.1 Instruction conditionnelle if
+  <a class="reference internal nav-link" href="#definition-of-variables">
+   1.  Definition of variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instruction-conditionnelle-if-else">
-   1.2 Instruction conditionnelle if else
+  <a class="reference internal nav-link" href="#key-characteristics-of-variables">
+   2. Key Characteristics of Variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instruction-conditionnelle-if-elseif">
-   1.3 Instruction conditionnelle if elseif
+  <a class="reference internal nav-link" href="#arithmetic-operators">
+   3. Arithmetic Operators
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#addition">
+     3.1. Addition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subtraction">
+     3.2. Subtraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication">
+     3.3. Multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division">
+     3.4. Division
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulus">
+     3.5. Modulus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exponentiation">
+     3.6. Exponentiation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   4. Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-01">
+     Exercise 01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-02">
+     Exercise 02
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-03">
+     Exercise 03
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-04">
+     Exercise 04
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-05">
+     Exercise 05
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-06">
+     Exercise 06
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-07">
+     Exercise 07
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-08">
+     Exercise 08
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-09">
+     Exercise 09
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-10">
+     Exercise 10
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -451,147 +482,213 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="instructions-conditionnelles">
-<h1>Instructions conditionnelles<a class="headerlink" href="#instructions-conditionnelles" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les instructions conditionnelles sont un moyen de contrôler la logique et le déroulement de votre script avec des conditions</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-variables-in-algorithms">
+<h1>Introduction to Variables in Algorithms<a class="headerlink" href="#introduction-to-variables-in-algorithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definition-of-variables">
+<h2>1.  Definition of variables<a class="headerlink" href="#definition-of-variables" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
-<p class="admonition-title"><font color='blue'>Les instructions conditionnelles</font></p>
-<p>En language Python, les trois principales structures de test sont les suivantes :</p>
+<p class="admonition-title">Variable</p>
+<p>A variable in an algorithm is a symbolic name that represents a memory location where data can be stored, modified, and retrieved during execution. Variables are essential for storing values that change throughout the execution of an algorithm.</p>
+</div>
+</div>
+<div class="section" id="key-characteristics-of-variables">
+<h2>2. Key Characteristics of Variables<a class="headerlink" href="#key-characteristics-of-variables" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Key Characteristics of Variables</p>
+<p>The key characteristics of variables in algorithms are as follows:</p>
 <ul class="simple">
-<li><p>Instruction conditionnelle if</p></li>
-<li><p>Instruction conditionnelle if else</p></li>
-<li><p>Instruction conditionnelle if elseif</p></li>
+<li><p>Name: A unique identifier for the variable.</p></li>
+<li><p>Data Type: Defines the type of value the variable can hold</p></li>
+<li><p>Value: The actual data stored in the variable.</p></li>
+<li><p>Memory Location: The address where the value is stored in memory.</p></li>
 </ul>
 </div>
-<div class="section" id="instruction-conditionnelle-if">
-<h2>1.1 Instruction conditionnelle if<a class="headerlink" href="#instruction-conditionnelle-if" title="Lien permanent vers ce titre">¶</a></h2>
-<ul class="simple">
-<li><p>La première est la plus simple contenant juste if :</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="n">instructions</span>
+<p><strong>Example</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Begin  
+   X ← 10  
+   Y ← X + 5  
+   Output Y  
+End
 </pre></div>
 </div>
-<p><img alt="Drag Racing" src="_images/if.JPG" /></p>
-<p>Pour la structure simple <code class="docutils literal notranslate"><span class="pre">if</span></code>: si la condition est vrai, le bloc d’instructions en dessous est exécuté. Sinon, il ne sera pas exécuté.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="c1"># la condition est x&lt;15</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est plus petit que 15&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="n">est</span> <span class="n">plus</span> <span class="n">petit</span> <span class="n">que</span> <span class="mi">15</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="c1"># la condition est x==15</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">15</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est egale a 15&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Begin  
+   X ← 10  
+   Name ← &quot;Ahmed&quot;  
+   Output Name, &quot;has&quot;, X, &quot;apples.&quot;  
+End
 </pre></div>
 </div>
 </div>
-<div class="section" id="instruction-conditionnelle-if-else">
-<h2>1.2 Instruction conditionnelle if else<a class="headerlink" href="#instruction-conditionnelle-if-else" title="Lien permanent vers ce titre">¶</a></h2>
-<ul class="simple">
-<li><p>La deuxième fait apparaitre else :</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="n">instructions_1</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">instructions_2</span>
+<div class="section" id="arithmetic-operators">
+<h2>3. Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="addition">
+<h3>3.1. Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+a + b
+\]</div>
+<p>Adds two values together.</p>
+</div>
+<div class="section" id="subtraction">
+<h3>3.2. Subtraction<a class="headerlink" href="#subtraction" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+a - b
+\]</div>
+<p>Subtracts one value from another.</p>
+</div>
+<div class="section" id="multiplication">
+<h3>3.3. Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+a \times b \quad \text{or} \quad a \cdot b
+\]</div>
+<p>Multiplies two values together.</p>
+</div>
+<div class="section" id="division">
+<h3>3.4. Division<a class="headerlink" href="#division" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\frac{a}{b}
+\]</div>
+<p>Divides one value by another.</p>
+</div>
+<div class="section" id="modulus">
+<h3>3.5. Modulus<a class="headerlink" href="#modulus" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+a \mod b
+\]</div>
+<p>Returns the remainder after dividing a by b.</p>
+<p>Example: <span class="math notranslate nohighlight">\( 10 \mod 3 = 1 \)</span></p>
+</div>
+<div class="section" id="exponentiation">
+<h3>3.6. Exponentiation<a class="headerlink" href="#exponentiation" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+a^b
+\]</div>
+<p>Raises (a) to the power of (b).</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>4. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-01">
+<h3>Exercise 01<a class="headerlink" href="#exercise-01" title="Permalink to this headline">¶</a></h3>
+<p>Given the following assignments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X ← 4  
+Y ← 2  
+X ← X * Y  
+Y ← Y * X
 </pre></div>
 </div>
-<p><img alt="Drag Racing" src="_images/ifelse.JPG" /></p>
-<ul class="simple">
-<li><p>Pour la structure <code class="docutils literal notranslate"><span class="pre">if...else</span></code> : si la condition de <code class="docutils literal notranslate"><span class="pre">if</span></code> est vrai, le bloc d’instructions en dessous de <code class="docutils literal notranslate"><span class="pre">if</span></code> sera exécuté. Sinon, le bloc en dessous de <code class="docutils literal notranslate"><span class="pre">else</span></code> sera exécuté.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="c1"># la condition est x&lt;10</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est plus grand que 10&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est plus petit ou égale à 10&quot;</span><span class="p">)</span>
+<p>What are the final values of X and Y? Explain the result.</p>
+</div>
+<div class="section" id="exercise-02">
+<h3>Exercise 02<a class="headerlink" href="#exercise-02" title="Permalink to this headline">¶</a></h3>
+<p>Given the following assignments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A ← 10  
+B ← A + 5  
+A ← B * 2  
+B ← A / 3
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="n">est</span> <span class="n">plus</span> <span class="n">petit</span> <span class="n">ou</span> <span class="n">égale</span> <span class="n">à</span> <span class="mi">10</span>
+<p>What are the final values of A and B? Explain each step and how the values change.</p>
+</div>
+<div class="section" id="exercise-03">
+<h3>Exercise 03<a class="headerlink" href="#exercise-03" title="Permalink to this headline">¶</a></h3>
+<p>Given the following assignments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A ← 6  
+B ← 3  
+C ← A + B  
+A ← B * 2  
+B ← A + C
 </pre></div>
 </div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un programme en Python qui demande à l’utilisateur d’entrer un nombre. En fonction de la valeur saisie, le programme doit déterminer si le nombre est positif, négatif. Ensuite, le programme doit afficher un message approprié indiquant la classification du nombre.</p>
+<p>What are the final values of A, B, and C? Explain the result.</p>
 </div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un programme en Python qui demande à l’utilisateur de saisir une note entre 0 et 20. Ensuite, le programme doit afficher la mention correspondante en fonction de la note obtenue  (V ou NV)</p>
-</div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un programme en Python qui demande à l’utilisateur de saisir un nombre entier. Ensuite, le programme doit afficher si le nombre est pair ou impair.</p>
-</div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un programme qui demande à l’utilisateur d’entrer son âge. Le programme doit déterminer si l’utilisateur est éligible pour voter (âge &gt;= 18) et afficher un message approprié.</p>
-</div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un code qui demande à l’utilisateur d’entrer un mot de passe. Le programme doit comparer le mot de passe saisi avec un mot de passe prédéfini. Si le mot de passe est correct, affichez un message indiquant que l’accès est autorisé, sinon, affichez un message indiquant que le mot de passe est incorrect.</p>
-<p>Utilisez une constante pour stocker le mot de passe prédéfini.</p>
-</div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un programme qui demande à l’utilisateur d’entrer son nom d’utilisateur et son mot de passe. Le programme doit comparer ces informations avec des valeurs prédéfinies. Si les informations sont correctes, affichez un message d’authentification réussie ; sinon, affichez un message d’échec d’authentification.</p>
-<p>Utilisez des constantes pour stocker le nom d’utilisateur et le mot de passe prédéfinis.</p>
-</div>
-</div>
-<div class="section" id="instruction-conditionnelle-if-elseif">
-<h2>1.3 Instruction conditionnelle if elseif<a class="headerlink" href="#instruction-conditionnelle-if-elseif" title="Lien permanent vers ce titre">¶</a></h2>
-<ul class="simple">
-<li><p>La dernière fait apparaitre <code class="docutils literal notranslate"><span class="pre">elif</span></code> :</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition_1</span><span class="p">:</span>
-    <span class="n">Bloc</span> <span class="n">d</span><span class="s1">&#39;instructions 1</span>
-<span class="k">elif</span> <span class="n">condition_2</span><span class="p">:</span>
-    <span class="n">Bloc</span> <span class="n">d</span><span class="s1">&#39;instructions 2</span>
-<span class="k">elif</span> <span class="n">condition_3</span><span class="p">:</span>
-    <span class="n">Bloc</span> <span class="n">d</span><span class="s1">&#39;instructions 3</span>
-<span class="o">...</span>
-<span class="k">elif</span> <span class="n">condition_n</span><span class="p">:</span>
-    <span class="n">Bloc</span> <span class="n">d</span><span class="s1">&#39;instructions n</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">Bloc</span> <span class="n">d</span><span class="s1">&#39;instructions n+1</span>
+<div class="section" id="exercise-04">
+<h3>Exercise 04<a class="headerlink" href="#exercise-04" title="Permalink to this headline">¶</a></h3>
+<p>Given the following assignments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X ← 20  
+Y ← 4  
+X ← X / Y  
+Y ← X + 2
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="c1"># la condition est x&gt;10</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est plus grand que 10&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est plus petit ou égale à 10&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;est égale à 10&quot;</span><span class="p">)</span>
-    
+<p>What are the final values of X and Y? Provide an explanation for each step.</p>
+</div>
+<div class="section" id="exercise-05">
+<h3>Exercise 05<a class="headerlink" href="#exercise-05" title="Permalink to this headline">¶</a></h3>
+<p>Given the following assignments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X ← 10  
+Y ← -2 
+X ← X / Y  
+Y ← X*2
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="n">est</span> <span class="n">égale</span> <span class="n">à</span> <span class="mi">10</span>
+<p>What are the final values of X and Y? Provide an explanation for each step.</p>
+</div>
+<div class="section" id="exercise-06">
+<h3>Exercise 06<a class="headerlink" href="#exercise-06" title="Permalink to this headline">¶</a></h3>
+<p>Based on the following assignments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X ← 25  
+Y ← 4  
+Z ← X mod Y  
+X ← Z * 3  
+Y ← X + Z
 </pre></div>
 </div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Écrivez un programme qui demande à l’utilisateur de saisir deux nombres. Ensuite, le programme doit déterminer et afficher quel nombre est le plus grand.</p>
+<p>What are the final values of X, Y, and Z? Explain the result.</p>
 </div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Ecrire le code qui permet de demander l’âge d’une personne et d’afficher dans la console si une personne est un enfant, ou un adolescent, ou une personne est un adulte</p>
+<div class="section" id="exercise-07">
+<h3>Exercise 07<a class="headerlink" href="#exercise-07" title="Permalink to this headline">¶</a></h3>
+<p>Consider the following assignments</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M ← 3  
+N ← 4  
+O ← M ^ N  
+M ← O / 2  
+N ← M + O
+</pre></div>
 </div>
-<div class="warning admonition">
-<p class="admonition-title">Exercice</p>
-<p>Un cinéma pratique trois types de tarifs pour deux personnes :</p>
-<ul class="simple">
-<li><p>si les deux personnes sont mineures, elles payent 65 DH chacune,</p></li>
-<li><p>si l’une seulement est mineure, elles payent un tarif de groupe de 150 DH,</p></li>
-<li><p>si les deux personnes sont majeures, elles payent 190 DH en tout.</p></li>
-</ul>
-<p>Écrire un programme qui demande l’âge de chacune des personnes,et affiche dans la console le prix à payer.</p>
+<p>What are the final values of M, N, and O? Explain the result.</p>
+</div>
+<div class="section" id="exercise-08">
+<h3>Exercise 08<a class="headerlink" href="#exercise-08" title="Permalink to this headline">¶</a></h3>
+<p>Consider the following assignments</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X ← 5  
+Y ← 3  
+Z ← X ^ Y  
+X ← Z mod 4  
+Y ← X + Z
+</pre></div>
+</div>
+<p>What are the final values of X, Y, and Z? Explain the result.</p>
+</div>
+<div class="section" id="exercise-09">
+<h3>Exercise 09<a class="headerlink" href="#exercise-09" title="Permalink to this headline">¶</a></h3>
+<p>Assume the following variable assignments</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>P ← 2  
+Q ← 6  
+R ← P ^ Q  
+P ← R mod 10  
+Q ← P + R
+</pre></div>
+</div>
+<p>What are the final values of P, Q, and R? Explain the result.</p>
+</div>
+<div class="section" id="exercise-10">
+<h3>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this headline">¶</a></h3>
+<p>Consider the following algorithmic steps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A ← 8  
+B ← 3  
+C ← A ^ B  
+D ← C mod 5  
+A ← D * 2  
+B ← A + D
+</pre></div>
+</div>
+<p>Calculate the final values of A, B, C, and D.</p>
 </div>
 </div>
 </div>
@@ -621,17 +718,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Chapitre2.html" title="précédent page">
+    <a class='left-prev' id="prev-link" href="chap2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">précédent</p>
-            <p class="prev-next-title">Instructions composées</p>
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">CHAPTER 02 : VARIABLES AND ASSIGNMENT</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="chap22.html" title="suivant page">
+    <a class='right-next' id="next-link" href="chap22.html" title="next page">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Les Boucles</p>
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Types in Algorithms</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -642,7 +739,7 @@
     <footer class="footer">
   <p>
     
-      Par Prof. Jouilil Youness<br/>
+      By Prof. Jouilil Youness<br/>
     
   </p>
 </footer>

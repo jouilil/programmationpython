@@ -1,85 +1,139 @@
-# Tuples en Python
+# PRACTICE EXERCISES
 
-##### 1.  Définition
+##### EXERCISE 1
 
-Un tuple en programmation est une structure de données utilisée pour stocker plusieurs éléments de manière ordonnée. 
+```{admonition} EXERCISE 01
+:class: tip
+1. Draw the truth table for P AND Q.
 
-Un tuple est une liste qui ne peut plus être modifiée. Autrement dit, les tuples ressemblent aux listes, mais on ne peut pas les modifier une fois qu’ils ont été créés (**un objet immuable**).
+2. Draw the truth table for P OR Q.
 
-On définit tuples avec des parenthèses `()`.
-
-
-##### 2. Comment créer un tuple ?
-
-Pour créer un tuple, on utilise les parenthèses `()` puis on place les éléments à l'intérieur en les séparant par une virgule.
-
-
-
-```
-# Créer un tuple vide
-mon_tuple = ()
-
+3. Draw the truth table for NOT P.
 ```
 
-Pour créer un tuple , vous pouvez utiliser la syntaxe suivante:
+##### EXERCISE 2
 
-```
-mon_tuple = ("famille",1,7,"voiture", True)
-print(type(mon_tuple))
-```
-
-```
-<class 'tuple'>
-```
-
-##### 3. Affichage
-
-```
-print(mon_tuple[0])
-```
-
-```
-famille
-```
-
-```
-mon_tuple[1] = "droit"
-```
-
-On utilisera un tuple pour définir des sortes de constantes qui n'ont donc pas vocation à changer.
-
-```{admonition} <font color='blue'> Remarque</font>
+```{admonition} EXERCISE 02
 :class: tip
 
-Les tuples sont surtout utiliser pour définir les constantes qui n'ont donc pas vocation à changer. 
+In each case, decide whether the statement is true or false.
 
-les tuples ne permettent pas d'ajouter, de supprimer ou de modifier des éléments une fois créés. Toute tentative de modification d'un tuple entraînera une erreur.
+1. 136 is a multiple of 17.  
 
-```
-##### 4. Concaténation
+2. 2 divides 55.  
 
-```
-tuple1 = (0, 8, 1, 2, 3)
-tuple2 = ('Ali', 'said', 'Fatima')
-print(tuple1 + tuple2)
-```
+3. 136 is a multiple of 17 and 2 divides 55.  
 
-```
-(0, 8, 1, 2, 3, 'Ali', 'said', 'Fatima')
-```
+4. 136 is a multiple of 17 or 2 divides 55.  
 
-```
-tuple3=(0, 8, 1, 2, 3, 'Ali', 'said', 'Fatima')
-print(len(tuple3))
+5. (∃x ∈ R : x + 1 = 0) ∧ (∃x ∈ R : x + 3 = 0)  
+
+6. (∃x ∈ R : x + 1 = 0) ∨ (∃x ∈ R : x + 7 = 0)  
+
+7. (∀x ∈ R : x + 1 = 0) ∨ (∃x ∈ R : x + 7 = 0)  
+
+8. (∀x ∈ R : x + 1 = 0) ∧ (∃x ∈ R : x + 7 = 0) 
 ```
 
-Parfois, les tuples ne sont pas entourés de parenthèses, même s’il s’agit quand même de tuples.
+##### EXERCISE 3
+```{admonition} EXERCISE 03
+:class: tip
+Make a truth table for the given expression.
+
+<center>
+
+$ \neg P \wedge Q$
+
+</center>
+
 
 ```
-a,b = 2, 3
-print(a)
-print(b)
-#Ceci revient
-(a,b) = (2, 3)
-print((a,b))
+
+##### EXERCISE 4
+```{admonition} EXERCISE 04
+:class: tip
+
+Write the truth table for
+
+<center>
+
+$ \neg P \vee Q$
+
+</center>
+```
+
+##### EXERCISE 5
+
+```{admonition} EXERCISE 05
+:class: tip
+
+Write the truth table for
+
+<center>
+
+$ \neg ( \neg P \vee Q)$
+
+</center>
+
+```
+
+##### EXERCISE 6
+
+
+```{admonition} EXERCISE 06
+:class: tip
+
+Write the truth table for
+
+<center>
+
+$ \neg ( P \wedge \neg Q)$
+
+</center>
+
+```
+
+##### ADVANCED EXERCISE 7 
+
+```{admonition} EXERCISE 07
+:class: tip
+
+Write the truth table for
+
+<center>
+
+$ \neg P \implies Q$
+
+</center>
+
+```
+
+##### ADVANCED EXERCISE 8
+
+```{admonition} EXERCISE 08
+:class: tip
+
+Write the truth table for
+
+<center>
+
+$ P \implies Q \vee S$
+
+</center>
+
+```
+
+##### ADVANCED EXERCISE 9
+
+```{admonition} EXERCISE 09
+:class: tip
+
+Write the truth table for
+
+<center>
+
+$ P \vee Q \implies  \neg S$
+
+</center>
+
 ```

@@ -1,520 +1,135 @@
-### Régression linéaire simple avec Python
-
-#### 1. Eléments théoriques
-
-##### 1.1. Présentation
-
-```{admonition} Régression linéaire simple
-*La régression linéaire simple (RLS)* permet d’étudier la liaison (supposée linéaire) entre deux variables quantitatives x et y où la variable y ( dite variable endogène) sera expliquée par la variable x (variable exogène).
-
-Autrement dit, on cherche à prévoir le comportement moyen de la variable aléatoire y en fonction de la variable non aléatoire x.
+#### Eléments théoriques
 
 
-*Exemples : *
-- La loi de la demande : 
+##### 1. Différents types de données
 
-$$
-X = a - b P_X ; (a,b) \in \mathbb{R}^{2}
-$$
+Les données peuvent se présenter sous des formes variées, et chaque type de données requiert des méthodes spécifiques de représentation graphique afin de faciliter leur analyse et leur interprétation. Voici une description détaillée de ces catégories :
 
-- La Fonction de consommation : 
+```{admonition} Types de données
 
-$$
-C = a + b Y ; (a,b) \in \mathbb{R}^{2}
-$$
+- Données structurées :
 
-- La Fonction de coût : 
+Les données structurées sont organisées selon un format précis, ce qui les rend facilement exploitables par des outils d’analyse. Ces données incluent, par exemple, les résultats de sondages, des fichiers contenant des notes académiques, ou encore des listes de préférences. Leur structure permet une représentation claire sous forme de tableaux, de diagrammes ou d'histogrammes, ce qui facilite l'identification de tendances ou de relations.
 
-$$
-CT = a + b Q ; (a,b) \in \mathbb{R}^{2}
-$$
+- Séries temporelles: 
 
+Les séries temporelles concernent des données collectées ou observées sur une période donnée, permettant d’étudier l’évolution de phénomènes dans le temps. Par exemple, l’analyse de la variation de la température moyenne terrestre, des fluctuations des marchés financiers ou encore du nombre hebdomadaire de cas de grippe repose sur ce type de données. Les graphiques en courbes, les diagrammes de tendances et les visualisations dynamiques sont souvent utilisés pour en saisir les évolutions et les patterns.
+
+- Données géographiques :
+
+Ces données décrivent des phénomènes localisés dans l’espace et sont souvent associées à des coordonnées géographiques. Elles permettent de cartographier des phénomènes tels que la répartition des espèces végétales dans différentes régions, l’indice de pauvreté au niveau mondial ou encore la position d’un téléphone portable à un moment donné. La cartographie thématique, les diagrammes en couches et les systèmes d’information géographique (SIG) constituent des outils privilégiés pour leur analyse.
+
+- Données non structurées:
+
+Contrairement aux données structurées, les données non structurées n’ont pas de format standard ou organisé. Elles incluent, par exemple, des contenus textuels, des images, des vidéos ou des enregistrements audio. Ces données nécessitent des techniques avancées, telles que l’analyse textuelle, la reconnaissance d’images ou encore l’apprentissage automatique, pour en extraire des informations exploitables. Leur représentation graphique peut inclure des nuages de mots, des diagrammes d’association ou des visualisations basées sur des modèles d’apprentissage.
 ```
 
-```{admonition} <font color='blue'>Modèle de régression linéaire simple</font>
-:class: tip
+##### 2. Types de variables
 
-Modèle linéaire simple} est un modèle de régression linéaire avec une seule variable dite "explicative".
+Il existe de nombreux types de données dans Python. Voici quelques-uns les plus basiques :
 
+- `float`: Les valeurs décimales (ou en virgule flottante) telles que 10,15 (attention en utilise `.` comme décimal au lieu de `,`).
 
-Soient x et y deux variables et $ \beta_{0}$, $\beta_{1}$ deux réels dans $\mathbb{R}$. Le modèle de régression simple s'écrit comme suit:
+- `int` (les nombres entiers) : les valeurs comme 8; 4; 10 sont des entiers (`int`). Les entiers font aussi partie des valeurs numériques.
 
-$$
-y = \beta_{0} + \beta_{1}x + \epsilon
-$$
+- `bool` (les valeurs booléennes) : `True` ou `False` sont dites valeurs logiques.
 
-- La variable y est appelée variable expliquée, variable dépendante ou encore variable endogène. 
+- `str` (les caractères, ou chaînes de caractères). Les guillemets "texte" (ou encore les apostrophes 'texte') indiquent que texte est de type `str`.
 
-- La variable x est appelée variable explicative, indépendante ou encore variables exogène.
+- `complex` (les nombre complexes): sont les nombres contenant une partie réelle et une partie imaginaire. En mathématiques, on note  le nombre complexe dans le carrée est égale à 1. Cependant, en Python, on utilise la lettre `j` (ou `J`) pour indiquer ce nombre. Par exemple, si on voulait écrire le nombre 3+1.5`i` (le nombre complexe dont la partie réelle est 3 et la partie imaginaire est 1.5) en python on écrit 3 + 1.5`j`.
 
-- $ \beta_{0}$, $\beta_{1}$ paramètres à estimer.
+- `None`: type Le mot-clé None est utilisé pour définir une valeur nulle (pas 0), ou aucune valeur du tout. None n’est pas la même chose que 0, `False` ou une chaîne vide ''. None est un type de données en soi (NoneType) et la seule valeur qui peut être de type `None` est le mot-clé None.
 
-- $\epsilon$ est appelé terme d'erreur ou perturbation.
-```
+si nous avons un variable (ou même une valeur) et nous voulons savoir son type de données, on utilise la fonction type. Il faut être prudent lorsqu’on voulait faire des opérations sur des variables si leur type n’est le même!
 
-```{admonition} Spécification
-- <font color='blue'>Modèle en coup instantanée (transversal)</font>
-
-Les variables représentent des phénomènes observés au même instant mais concernent plusieurs individus.
-
-$$
-y_{i} = \beta_{0} + \beta_{1}x_{i} + \epsilon_{i}  \qquad     ; \forall i = 1, ..., N
-$$
-
-*Exemple *
-
-La théorie Keynésienne stipule C = f(Y) avec $f^{'}$ > 0
-
-$$
-C_{i} = \beta_{0} + \beta_{1}Y_{i} + \epsilon_{i}
-$$
-
-- <font color='blue'>Modèle chronologique (temporel)</font>
-
-
-Les variables représentent des phénomènes observés à un instant de temps régulier pour le même individu.
-
-$$
-y_{t} = \beta_{0} + \beta_{1}x_{t} + \epsilon_{t} \qquad     ; \forall t = 1, ..., T
-$$
-*Exemple*
-
-$$
-C_{t} = \beta_{0} + \beta_{1}Y_{t} + \epsilon_{t}
-$$
-
-
-- <font color='blue'>Le modèle en panel (longitudinal)</font>
-
-Les variables représentent des phénomènes observés à un instant de temps régulier pour des individus différents.
-
-$$
-y_{it} = \beta_{0} + \beta_{1}x_{it} + \epsilon_{it} \qquad     ; \forall t = 1, ..., T , \forall i = 1, ..., N
-$$
-
-Exemple :
-
-$$
-C_{it} = \beta_{0} + + \beta_{1}Y_{it} + \epsilon_{it}
-$$
 
 ```
+# cette instruction va afficher int
+print(type(1))
+# cette instruction va afficher float
+print(type(1.5))
 
-```{admonition} Hypothèses de la RLS
-:class: attention
-Les hypothèses de la RLS permettent de déterminer les propriétés des estimateurs et de mettre en place les outils de statistique inférentielle (tests d’hypothèses, intervalle de confiance).
+# cette instruction va afficher  bool
+print(type(True))
+# cette instruction va afficher str
+print(type("bonjour"))
 
-Les hypothèses de la Régression Linéaire Simple peuvent être formulées, sous forme mathématique, comme suit:
+# cette instruction va afficher complex
+print(type(5+17.89j))
 
--  $H_{1}$: y est linéaire en x
-
-- $H_{2}$: E($\epsilon_{t}$) = 0 ; $\forall t = 1, 2,...T$
-
-- $H_{3}$: V($\epsilon_{t}$) = $\sigma^{2}_{\epsilon}$ (homoscédasticité)
-
-- $H_{4}$: cov($x_{t}, \epsilon_{t}$)= 0 
-
-- $H_{5}$: cov($\epsilon_{t}, \epsilon_{t^{'}}$)= 0  ; $\forall t \neq t^{'}$
-
-- $H_{6}$: $\epsilon_{t}$ $\thicksim$ N(0, $\sigma^{2}_{\epsilon}$)
+# cette instruction va afficher NoneType
+print(type(None))
 
 ```
-
-##### 1.2. Estimation des paramètres du RLS
-
-```{admonition} Exercice 1
-
-* En utilisant la méthode des Moindres Carrées Ordinaires (MCO) démontrez que :
-
-$$
-\widehat{{\beta_{1}}} =  \dfrac{cov(x,y)}{v(x)}
-$$
-
-$$
-\widehat{{\beta_{1}}} = \dfrac{ \sum _{t=1}^{T}(x_{t}-\overline{x})(y_{t}-\overline{y})}{ \sum _{t=1}^{T} (x_{t}-\overline{x})^{2}} 
-$$
-
-$$
-\widehat{{\beta_{0}}} = \overline{y} - \widehat{{\beta_{1}}}\overline{x} 
-$$
+Affichage après exécution :
 
 ```
-```{admonition} <font color='blue'>Réponse de l'exercice 1</font>
-:class: attention
-
-* On détermine la droite passant, le plus proche, de tous les points du nuage $(x_{t}, y_{t})$ 
-
-Notons par :
-
-- L’équation $ \widehat{{y_{t}}} = \widehat{{\beta_{0}}} + \widehat{{\beta_{1}}}x_{t}$ la droite de régression recherchée
-
-- La valeur résiduelle $e_{t} = y_{t} - \widehat{{y_{t}}}$
-
-**Objectif** : 
-
-On désire résoudre le problème d'optimisation suivant (càd calculer les valeurs qui minimisent la somme des carrés des résidus).
-
-$$
-(\widehat{{\beta_{0}}}, \widehat{{\beta_{1}}}) = Arg \underset{(\beta_{0}, \beta_{1}) \in \mathbb{R}^{2}}{Min}\sum _{t=1}^{T} \epsilon^{2}_{t} 
-$$
-
-- On pose:
-
-$$
-Min  ~ S(\beta_{0},\beta_{1}) = Min \sum _{t=1}^{T} \epsilon^{2}_{t}
-$$
-
-$$
-Min \sum _{t=1}^{T} \epsilon^{2}_{t} = Min \sum _{t=1}^{T} (y_{t} - \widehat{{y_{t}}})^{2} = Min  \sum _{t=1}^{T} (y_{t} - \widehat{{\beta_{0}}} - \widehat{{\beta_{1}}}x_{t})^{2} 
-
-$$
-
--Conditions
-
-Pour trouver la valeur du minimum recherché, on annule les dérivées par rapport $\beta_{0}$ et $\beta_{1}$.
-
-$$
-\dfrac{\partial S(\beta_{0},\beta_{1})}{\partial\beta_{0}} = 0
-$$
-
-$$
-\dfrac{\partial S(\beta_{0},\beta_{1})}{\partial\beta_{1}} = 0
-$$
-
-Les valeurs des paramètres qui minimisent la somme des carrés des résidus sont données par les deux formules suivantes:
-
-$$
-\widehat{{\beta_{1}}} =  \dfrac{cov(x,y)}{v(x)}
-
-
-\widehat{{\beta_{1}}} = \dfrac{ \sum _{t=1}^{T}(x_{t}-\overline{x})(y_{t}-\overline{y})}{ \sum _{t=1}^{T} (x_{t}-\overline{x})^{2}} 
-
-
-\widehat{{\beta_{0}}} = \overline{y} - \widehat{{\beta_{1}}}\overline{x} 
-$$
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+<class 'str'>
+<class 'complex'>
+<class 'NoneType'>
 ```
 
+##### 3. Axes de données
 
+Les données peuvent être classées selon leurs dimensions, chacune nécessitant des axes spécifiques pour leur visualisation.
 
-```{admonition} Exemple 1
-Soit C la fonction de demande Kéynisienne telle que :
+```{admonition} Axes de données
 
-$$
-C_{t} = \beta_{0} + \beta_{1}Y_{t} + \epsilon_{t} 
-$$
+**Les données unidimensionnelles  (1D)**: Elles se concentrent sur une seule variable et peuvent être représentées sur un axe linéaire.
 
-- $C$: Consommation
-- $Y$: Revenu 
-- $\beta_{0}$: Consommation autonome ou incompressible
-- $\beta_{1}$: Propension marginale à consommer
+- La répartition des âges dans une population : représentée par un histogramme pour montrer la fréquence des différentes tranches d’âge.
 
-__Questions__
+- Les résultats d’un examen pour une classe : affichés sous forme d’un graphique en barres où chaque barre représente une note et sa fréquence.
 
-1. D'après vos connaissances en économie, qu'il est le signe attendu par le paramètre $\beta_{1}$._Justifiez votre réponse_
-2. En appliquant la MCO, déterminer les valeurs de la consommation autonome et de la propension marginale à consommer
-3. En déduire l'expression de la droite de régression   $\widehat{C_{t}}$
+- Le nombre de visiteurs dans un musée sur une journée : visualisé par un diagramme en bâtons.
 
-On donne : Cov(C,Y) = 0.8, V(Y)=0.4, $\overline{C}$= 140 et $\overline{Y}$ = 110.
+**Données temporelles** : Les données temporelles, bien qu'unidimensionnelles dans leur nature, évoluent dans le temps. Elles utilisent un axe temporel pour montrer l’évolution ou les tendances.
 
+- L'évolution du prix du pétrole sur une année : illustrée par un graphique en courbes pour montrer les fluctuations mensuelles.
+
+- Le suivi des températures quotidiennes dans une ville : représenté par une courbe qui met en évidence les variations journalières.
+
+- Les ventes trimestrielles d’une entreprise : affichées sur un graphique de tendances pour analyser les performances commerciales.
+
+- Les pics d’affluence dans les transports publics : représentés par un graphique en aires pour visualiser les périodes de forte fréquentation.
+
+**Données bidimensionnelles (2D)** : Les données bidimensionnelles mettent en relation deux variables sur un plan cartésien ou une carte.
+
+- La relation entre l'âge et le revenu d’un groupe de personnes : visualisée par un graphique de dispersion pour identifier des corrélations.
+
+- La répartition des écoles dans une région : représentée sur une carte géographique avec des points localisant chaque établissement.
+
+- La consommation énergétique en fonction de la température extérieure : illustrée par un graphique en lignes croisées.
+
+- Une carte montrant le taux de vaccination par région : représentée par une carte thématique avec des zones colorées selon le pourcentage de vaccination.
+
+**Données tridimensionnelles (3D)**  Elles ajoutent une profondeur supplémentaire, permettant de visualiser simultanément trois variables.
+
+- La topographie d’un territoire : représentée par une carte en relief ou un graphique de surface en 3D montrant les variations d’altitude.
+
+- La variation de la température, de l’humidité et de la pression atmosphérique dans une région : affichée sur un diagramme en 3D pour analyser les interactions entre ces variables.
+
+- L’analyse des ventes par produit, par région et par période : visualisée par un histogramme 3D où chaque dimension représente une variable.
+- Les trajectoires des vols aériens : illustrées sur une carte en 3D montrant les altitudes et les itinéraires.
+
+**Données arborescentes et graphes** : Ces données illustrent des relations hiérarchiques ou des réseaux complexes.
+
+- Un arbre généalogique : représenté sous forme d’arborescence montrant les relations familiales entre individus.
+
+- La hiérarchie d’une entreprise : visualisée par un organigramme indiquant les liens entre les différents départements et postes.
+
+- Les connexions entre utilisateurs d’un réseau social : représentées par un graphe où chaque nœud correspond à un individu et chaque lien montre une interaction.
+
+- L’analyse des flux logistiques d’une entreprise : illustrée par un diagramme en arbre pour montrer les chemins empruntés par les produits, de la production à la distribution.
 ```
 
-```{admonition} <font color='blue'> Elements de réponse</font>
-:class: attention
-C est la fonction de demande Kéynisienne telle que :
+##### 6. Bonne pratiques
 
+```{admonition} Bonne pratiques
 
-$$
-C_{t} = \beta_{0} + \beta_{1}Y_{t} + \epsilon_{t} 
-$$
-1. $\beta_{1}$ $\in$ $\mathbb{R}^{+}$ 
-2. 
-$$
-\widehat{{\beta_{1}}} =  \dfrac{cov(C,Y)}{v(Y)} = \dfrac{0,8}{0,4}=2
+**Comment choisir le graphique adapté à chaque type de données ?**
 
-
-\widehat{{\beta_{0}}} = \overline{C} - \widehat{{\beta_{1}}}\overline{Y} =140-2*110 = -80
-$$
-```
-
-
-```{admonition} Exemple 2
-L'analyse de certaines données macroéconomiques a donné les résultats suivants:
-![Drag Racing](exo_5.JPG)
-
-
-1. Trouver les valeurs des paramètres estimés
-2. En déduire l'équation de la droite de régression
-```
-```{admonition} <font color='blue'> Elements de réponse</font>
-:class: attention
-
-1. D'après l'output 
-
-$$
-y_{t} = \beta_{0} + \beta_{1}x_{t} + \epsilon_{t} 
-$$
-
-$$
-\widehat{{\beta_{1}}} = 4,978 e^{-3}
-
-\widehat{{\beta_{0}}} = 3,907e^{+1}
-$$
-2. L'équation de la droite de régression
-
-$$
-\widehat{{y_{t}}} = 3,907e^{+1} + 4,978 e^{-3}x_{t}
-$$
-```
-
-##### 1.3. Propriétés et Distributions des estimateurs
-
-```{admonition} <font color='blue'>Théorème de Gauss-Markov</font>
-:class: attention
-Les estimateurs $\widehat{\beta_{0}}$ et $\widehat{\beta_{1}}$ sont des estimateurs linéaires, sans biais et à variances minimales de $\beta_{0}$ et $\beta_{1}$. On dit aussi qu'ils sont des estimateurs <font color='blue'>Best lineair Unbiased Estimators</font>
-```
-
-```{admonition} Conséquences du théorème de Gauss-Markov
-- $E(\widehat{\beta_{0}})$  = $\beta_{0}$
-- $E(\widehat{\beta_{1}})$  = $\beta_{1}$
-- $V(\widehat{\beta_{0}})$  = $(\dfrac{1}{T} + \dfrac{\overline{x}^{2}}{\sum (x_{t}- \overline{x})^{2}})\sigma^{2}_{\epsilon}$
-- $V(\widehat{\beta_{1}})$  = $\dfrac{\sigma^{2}_{\epsilon}}{T.V(x)}$
-- $Cov(\widehat{\beta_{0}}, \widehat{\beta_{1}}) = \dfrac{-\overline{x}}{\sum (x_{t}- \overline{x})^{2}}\sigma^{2}_{\epsilon} $
-```
-
-
-
-```{admonition} Conséquences du théorème de Gauss-Markov
-- $E(\widehat{\beta_{0}})$  = $\beta_{0}$
-- $E(\widehat{\beta_{1}})$  = $\beta_{1}$
-- $V(\widehat{\beta_{0}})$  = $(\dfrac{1}{T} + \dfrac{\overline{x}^{2}}{\sum (x_{t}- \overline{x})^{2}})\sigma^{2}_{\epsilon}$
-- $V(\widehat{\beta_{1}})$  = $\dfrac{\sigma^{2}_{\epsilon}}{T.V(x)}$
-- $Cov(\widehat{\beta_{0}}, \widehat{\beta_{1}}) = \dfrac{-\overline{x}}{\sum (x_{t}- \overline{x})^{2}}\sigma^{2}_{\epsilon} $
-```
-
-```{admonition} Estimation de la variance de l’erreur
-L'expression du résidu s'écrit comme suit : 
-
-$$
-\widehat{\epsilon_{t}} = y_{t} - \widehat{y}_{t}
-$$
-
-$$
-E (\sum \widehat{\epsilon_{t}}^{2}) = (T-2)\sigma^{2}_{\epsilon} \Rightarrow \sigma^{2}_{\epsilon} =  \dfrac{ \sum \widehat{\epsilon}_{t}^{2}}{T-2} = \dfrac{SCR}{T-2}
-$$
-
-
-$$
- \Rightarrow E( \widehat{\sigma^{2}}_{\epsilon}) = E(s^{2})  = \dfrac{\sum (y_{t}-\widehat{y_{t}})^{2}}{T-2} = \sigma^{2}_{\epsilon}
-$$
-
-
-**Conclusion**
-
-$\widehat{\sigma}^{2}_{\epsilon}$ est un estimateur sans biais de $\sigma^{2}_{\epsilon}$ 
-
-```
-
-##### 1.4. Inférence statistique
-
-###### 1.4.1. Distributions des estimateurs $\beta_{0}$ et $\beta_{1}$ 
- 
-```{admonition} Théorème 1 relatif à $\beta_{0}$
-$$
-\widehat{\beta_{0}} \thicksim   N ( \beta_{0}, \sigma^{2}_{\widehat{\beta_{0}}})
-\Rightarrow
-\dfrac{\widehat{\beta_{0}} - \beta_{0}}{\sigma_{\widehat{\beta_{0}}}} \thicksim N(0,1)
-$$
-
-
-Or : $\sigma^{2}_{\widehat{\beta_{0}}}$ = $(\dfrac{1}{T} + \dfrac{\overline{x}^{2}}{\sum (x_{t}- \overline{x})^{2}})\sigma^{2}_{\epsilon}$
-
-En remplaçant $\sigma_{\epsilon}^{2}$ par son estimation $s^{2}$
-
-$$
-t = \dfrac{\widehat{\beta_{0}} - \beta_{0}}{\widehat{\sigma_{\widehat{\beta_{0}}}}} \thicksim t_{(T-2)}
-$$
-La statistique t suit une loi de Student à T - 2 degrés de libertés.
-```
-
-```{admonition} Théorème 2 relatif à $\beta_{1}$
-$$
-\widehat{\beta_{1}} \thicksim   N ( \beta_{1}, \sigma^{2}_{\widehat{\beta_{1}}})
-\Rightarrow
-\dfrac{\widehat{\beta_{1}} - \beta_{1}}{\sigma_{\widehat{\beta_{1}}}} \thicksim N(0,1)
-$$
-
-
-Or : $\sigma^{2}_{\widehat{\beta_{1}}}$  = $\dfrac{\sigma^{2}_{\epsilon}}{T.V(x)}$ = $\dfrac{\sigma^{2}_{\epsilon}}{T.V(x)}$ \\
-$\widehat{\sigma^{2}_{\widehat{\beta_{1}}}}$ = $\dfrac{\widehat{\sigma^{2}_{\epsilon}}}{T.V(x)}$ 
-
-
-$$
-t = \dfrac{\widehat{\beta_{1}} - \beta_{1}}{\widehat{\sigma_{\widehat{\beta_{1}}}}} \thicksim t_{(T-2)}
-$$
-
-
-La statistique t suit une loi de Student à T - 2 degrés de libertés.
-```
-###### 1.4.2. Les intervalles de confiances
-
-```{admonition} Les intervalles de confiances
-Intervalle de confiance du paramètre $\beta_{0}$ au niveau de confiance 1-$\alpha$\\
-
-$$
-IC_{1-\alpha} (\beta_{0})= [\widehat{\beta_{0}} \pm t_{(T-2)} \sigma_{\widehat{\beta_{0}}} ]
-$$
-
-
-Intervalle de confiance du paramètre $\beta_{1}$ au niveau de confiance 1-$\alpha$
-
-$$
-IC_{1-\alpha} (\beta_{1})= [\widehat{\beta_{1}} \pm t_{(T-2)} \sigma_{\widehat{\beta_{1}}} ]
-$$
-
-```
-
-
-```{admonition} Exemple 3 
-:class: tip
-On suppose que $\widehat{Y_{t}}$ = $\widehat{\beta_{0}}$ + $\widehat{\beta_{1}}X_{t}$= -0.4 + $0.2X_{t}$
-1. Déduire les valeurs des estimateurs $\beta_{0}$ et $\beta_{1}$.
-2. Calculer la valeur prédite pour $\widehat{Y}_{t=10}$ sachant que $X_{t= 10}$ = 5.
-3. Calculer les intervalles de confiances de $\beta_{0}$ et $\beta_{1}$ au seuil de confiance de 95 $\%$. 
-On donne :
-
-$\sigma^{2}_{\widehat{\beta_{0}}} = $ 0.12, $\sigma_{\widehat{\beta_{1}}} = $ 0.16, $t_{30; 97,5\%} = 2.04$
-```
-
-```{admonition} <font color='blue'> Elements de réponse</font>
-:class: attention
-
-On a :
-
-$\widehat{Y_{t}}$ = $\widehat{\beta_{0}}$ + $\widehat{\beta_{1}}X_{t}$= -0.4 + $0.2X_{t}$
-
-1. Les valeurs des estimateurs $\beta_{0}$ et $\beta_{1}$.
-
-$$
-\widehat{\beta_{0}}= -0.4
-
-\widehat{\beta_{1}}= 0.2
-$$
-
-2. Calculons la valeur prédite pour $\widehat{Y}_{t=10}$ sachant que $X_{t= 10}$ = 5.
-
-$\widehat{Y_{t}}$ = $\widehat{\beta_{0}}$ + $\widehat{\beta_{1}}X_{t}$= -0.4 + $0.2X_{t}$
-
-Pour t = 10 et $X_{t= 10}$ = 5, on a :
-
-$\widehat{Y_{t=10}}$ = -0.4 + $0.2X_{t=10}$
-
-$\widehat{Y_{t=10}}$ = -0.4 + 0.2*5 = 0,6
-
-3. Calculons les intervalles de confiances de $\beta_{0}$ et $\beta_{1}$ au seuil de confiance de 95 $\%$.
-
-Intervalle de confiance du paramètre $\beta_{0}$ au niveau de confiance 1-$\alpha$ = 95 $\%$
-
-$$
-IC_{1-\alpha} (\beta_{0})= [\widehat{\beta_{0}} \pm t_{(T-2)} \sigma_{\widehat{\beta_{0}}} ]
-$$
-
-
-Intervalle de confiance du paramètre $\beta_{1}$ au niveau de confiance 1-$\alpha$ = 95 $\%$
-
-$$
-IC_{1-\alpha} (\beta_{1})= [\widehat{\beta_{1}} \pm t_{(T-2)} \sigma_{\widehat{\beta_{1}}} ]
-$$
-
-```
-
-```{admonition} Exercice 
-:class: tip
-![Drag Racing](exo_6.JPG)
-1. Expliciter la formule du modèle étudié
-2. Déduire les valeurs des estimateurs $\beta_{0}$ et $\beta_{1}$
-3. Calculer les intervalles de confiances de $\beta_{0}$ et $\beta_{1}$.
-```
-
-
-##### 1.5. Equation d’analyse de variance
-```{admonition} Décomposition de la variance
-A partir de quand peut-on dire que la régression est de bonne qualité ?
-
-$$
-\sum (y_{t} - \overline{y})^{2} = \sum (y_{t} - \widehat{y}_{t})^{2} + \sum (\widehat{y}_{t} - \overline{y})^{2}
-$$
-
-
-SCT = SCR + SCE
-
-
-Avec : 
-- SCT : somme des carrés totaux
-- SCE : somme des carrés expliqués par le modèle
-- SCR : somme des carrés résiduels, non expliqués par le modèle
-```
-
-```{admonition} Démonstration
-:class: attention, dropdown
-
-$$
-\sum (y_{t} - \overline{y})^{2} = \sum (y_{t} - \widehat{y}_{t} + \widehat{y}_{t} - \overline{y})^{2} 
-$$
-
-$$
- SCT = \sum (y_{t} - \widehat{y}_{t})^{2} + \sum (\widehat{y}_{t} - \overline{y})^{2}
-$$
-
-$$
-SCT = SCR + SCE
-$$
-
-La variabilité totale (SCT) est égale à la variabilité expliquée (SCE) plus la variabilité des résidus (SCR).
-
-Cette équation va nous permettre de juger de la qualité de l’ajustement d’un modèle. En effet, plus la variance expliquée est proche de la variance totale, meilleur est l’ajustement du nuage de points par la droite des moindres carrés.
-```
-
-##### 1.6. Qualité d'un modèle
-
-```{admonition} Coefficient de détermination
-Coefficient de détermination noté généralement par $R^2$
-
-$$
-R^2 = \dfrac{SCE}{SCT}
-
- = \dfrac{\sum (\widehat{y}_{t} - \overline{y})^{2}}{\sum (y_{t} - \overline{y})^{2}}
-$$
-
- Il exprime la part de variabilité de Y expliquée par le modèle.
-
-**Exemple** : 
-
-Par exemple, un coefficient de détermination $R^{2}$ de 0,90 indique que 90 $\%$ de la dispersion (de variabilité de Y) est expliquée par le modèle de régression étudié.
-- $R^2$ est toujours compris entre 0 et 100 $\%$.
-- Plus la valeur $R^2$ est élevée, plus le modèle est ajusté à vos données.
-- La valeur $R^2$ augmente toujours lorsque vous ajoutez des prédicteurs à un modèle.
-
-Par exemple, le meilleur modèle à 4 prédicteurs aura toujours une valeur $R^2$ au moins aussi élevée que celle du meilleur modèle à 3 prédicteurs. Par conséquent, $R^2$ est utile pour \textit{comparer des modèles de même taille}.
-```
-
-```{admonition} Exercice d'application
-:class: attention
-Un économètre s'intéresse à la liaison pouvant exister entre la croissance économique d’un pays (Y) et est le niveau d’inflation (X). Il relève 5 couples de données consignés dans le tableau ci-dessous:
-![Drad Racing](exo_6.JPG)
-
-
-1. Déterminer l’équation de la droite de régression de Y sur X.
-2. Calculer les intervalles de confiances de $\beta_{0}$ et $\beta_{1}$ au seuil de confiance de 95 $\%$.
-3. Le coefficient de la variable x est-il significativement inférieur à (-1) ?
-4. Juger la qualité de cet ajustement.
-5. L'économètre prévoit respectivement 26 et 30 pour le niveau d’inflation. Déterminer les valeurs prévues pour la variable croissance.
-```
-
-##### 1.7. Tests sur les paramètres du modèle
-
-
-#### 2. Études de cas sur Python
-
-
-
-
+**Quelles sont les pièges à éviter ?**

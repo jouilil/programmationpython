@@ -1,111 +1,79 @@
-# Les modules en Python
-
-Les modules, également connus sous le nom de bibliothèques ou de librairies en programmation Python, sont des ensembles de programmes qui renferment des fonctions destinées à être fréquemment réutilisées
+# PRACTICE EXERCISES
 
 
 
-#### 1.  Création de vos propres modules
-Pour créer un module en Python, il vous suffit de créer un fichier avec l'extension .py et d'y écrire votre code Python. Par exemple, si vous voulez créer un module pour le calcul de la surface des formes géométriques, vous pouvez créer un fichier mes_surfaces.py et y définir vos fonctions.
+### 1 Exercise
 
+```{admonition} Exercise 01
+:class: tips
 
-##### 1.1. Création d'un Module pour le Calcul de Surface
-Supposons que vous souhaitiez créer un module pour calculer la surface de différentes formes géométriques telles que le carré, le rectangle, le cercle et le triangle.
-
-Créez un nouveau fichier Python appelé surface.py.
-
-Dans ce script, nous définissons les fonctions pour calculer la surface de certaines formes géométriques :
-
+Write an algorithm/a program  that prompts the user to input their age. If the entered age is greater than or equal to 18, the program should display the message “You are an adult”; otherwise, it should display “You are a minor.
 ```
-import math
 
-def surface_carre(cote):
-    return cote ** 2
+### 2 Exercise
 
-def surface_rectangle(longueur, largeur):
-    return longueur * largeur
+```{admonition} Exercise 02
+:class: tips
 
-def surface_cercle(rayon):
-    return math.pi * rayon ** 2
-
-def surface_triangle(base, hauteur):
-    return (base * hauteur) / 2
+Create an algorithm/a program  that reads a student’s exam score. If the score is greater than or equal to 60, display “Pass”; otherwise, display “Fail”.
 
 ```
 
-##### 1.2. Utilisation du Module dans un Programme Principal
+### 3 Exercise
 
-Maintenant que vous avez créé votre module `mes_surface.py`, vous pouvez l'importer et l'utiliser dans un autre programme Python.
+```{admonition} Exercise 03
+:class: tips
 
-Créons un nouveau fichier Python appelé `main.py`.
-
-Dans ce fichier, nous importons le module `mes_surface` et utilisons ses fonctions pour calculer la surface de différentes formes géométriques :
-
-```
-import mes_surface
-
-# Calcul de la surface d'un carré
-surface_carre = mes_surface.surface_carre(5)
-print("Surface du carré :", surface_carre)
-
-# Calcul de la surface d'un rectangle
-surface_rectangle = mes_surface.surface_rectangle(4, 6)
-print("Surface du rectangle :", surface_rectangle)
-
-# Calcul de la surface d'un cercle
-surface_cercle = mes_surface.surface_cercle(3)
-print("Surface du cercle :", surface_cercle)
-
-# Calcul de la surface d'un triangle
-surface_triangle = mes_surface.surface_triangle(4, 3)
-print("Surface du triangle :", surface_triangle)
-```
-
-### 2. Modules prédéfinis 
-
-Les modules prédéfinis sont des modules intégrés à Python et disponibles par défaut lors de l'installation de Python. Ils comprennent des modules tels que Numpy, math, random, os, sys, datetime, etc. Ces modules fournissent des fonctionnalités prêtes à l'emploi pour effectuer des opérations mathématiques, générer des nombres aléatoires, manipuler des fichiers et des répertoires, interagir avec le système d'exploitation, gérer la date et l'heure, et bien plus encore.
-
-
-
-#### 2.1. math
-le module math nous a donné accès aux fonctions trigonométriques sinus et cosinus, et à la constante :
+Write an algorithm/a program to check whether a given number is positive or negative.
 
 ```
-import math
-math.cos(math.pi / 3)
-```
-
-```
-import math
-math.sin(math.pi / 2)
-```
+### 4 Exercise
 
 
-#### 2.2.  Numpy
+```{admonition} Exercise 04
+:class: tips
+Create an algorithm/a program  that takes an integer input from the user and determines whether the number is even or odd. Display the corresponding result.
 
-NumPy introduit un nouveau type l'array qui est semblable à une liste, mais tous les éléments doivent être du même type (entier, flottant, booléen ou encore chaîne de caractères).
-
-
-NumPy utilisée pour :
-
-- Effectuer des calculs mathématiques et scientifiques
-
-- calculs numériques autour des tableaux multidimensionnels
-
-- Algèbre lnéaire
-
-NumPy est la bibliothèque Python la plus utilisée en Data Science
-
-
-```python
-import numpy as np
-
-# Construction du tableau de type float
-tab = np.array([0,1, 2, 3, 4])
-
-# Affichage du tableau
-print(tab)
-```
 
 ```
-[0 1 2 3 4]
+### 5 Exercise
+
+```{admonition} Exercise 05
+:class: tips
+Design an algorithm/a program  that compares a user-entered password to a predefined one stored in the program. Display “Access granted” if the password matches; otherwise, display “Access denied
 ```
+
+### 6 Exercise
+
+```{admonition} Exercise 06
+:class: tips
+
+Write an algorithm/a program that accept two integers and check whether they are equal or not.
+
+```
+
+### 7 Exercise
+
+```{admonition} Exercise 07
+:class: tips
+Write the algorithms/ programs  that allow you to :
+
+- Solve a first-degree equation: $ax+b=0$, where $a$ and $b$ are real numbers given by the user.
+
+- Solve a second-degree equation: $ax^2+bx+c=0$, where $a$, $b$ and $c$ are real numbers given by the
+user.
+```
+### 8 Exercise
+
+```{admonition} Exercise 08
+:class: tips
+Ask the user to input a number. Determine if it is even or odd using an if-else statement.
+```
+### 9 Exercise
+
+```{admonition} Exercise 09
+:class: tips
+Write an algorithm/a program ask the user to input a password. If it matches, print "Correct password", otherwise print "Incorrect password".
+Indication : Set a predefined password in a variable. 
+```
+
